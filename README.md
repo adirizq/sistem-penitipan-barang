@@ -1,4 +1,4 @@
-# sistem-penitipan-barang
+# Sistem Penitipan Barang
 Project akhir mata kuliah pemrograman visual oleh kelompok dua 
 
 ## Contributor
