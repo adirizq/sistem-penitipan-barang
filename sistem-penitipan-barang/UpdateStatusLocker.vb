@@ -5,7 +5,7 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        Dim status = MonitorLocker.Locker.GetLockerStatusByID(MonitorLocker.selectedLockerID)
+        Dim status = MonitorLocker.Locker.GetLockerInformationByID(MonitorLocker.selectedLockerID)(3)
 
         LblLockerIdTitle.Text = MonitorLocker.selectedLockerID
 

@@ -42,7 +42,7 @@ Partial Class EditLocker
         Me.titleLbl.MinimumSize = New System.Drawing.Size(100, 34)
         Me.titleLbl.Name = "titleLbl"
         Me.titleLbl.Size = New System.Drawing.Size(100, 34)
-        Me.titleLbl.TabIndex = 2
+        Me.titleLbl.TabIndex = 0
         Me.titleLbl.Text = "Locker"
         '
         'LblLockerIdTitle
@@ -55,7 +55,7 @@ Partial Class EditLocker
         Me.LblLockerIdTitle.MinimumSize = New System.Drawing.Size(100, 34)
         Me.LblLockerIdTitle.Name = "LblLockerIdTitle"
         Me.LblLockerIdTitle.Size = New System.Drawing.Size(100, 34)
-        Me.LblLockerIdTitle.TabIndex = 2
+        Me.LblLockerIdTitle.TabIndex = 0
         Me.LblLockerIdTitle.Text = "1"
         '
         'CBUkuran
@@ -65,7 +65,7 @@ Partial Class EditLocker
         Me.CBUkuran.Location = New System.Drawing.Point(124, 77)
         Me.CBUkuran.Name = "CBUkuran"
         Me.CBUkuran.Size = New System.Drawing.Size(212, 24)
-        Me.CBUkuran.TabIndex = 8
+        Me.CBUkuran.TabIndex = 1
         '
         'LblUkuran
         '
@@ -113,7 +113,7 @@ Partial Class EditLocker
         Me.TxtLokasi.Location = New System.Drawing.Point(124, 157)
         Me.TxtLokasi.Name = "TxtLokasi"
         Me.TxtLokasi.Size = New System.Drawing.Size(212, 24)
-        Me.TxtLokasi.TabIndex = 9
+        Me.TxtLokasi.TabIndex = 2
         '
         'BtnUpdateLocker
         '
@@ -121,7 +121,7 @@ Partial Class EditLocker
         Me.BtnUpdateLocker.Location = New System.Drawing.Point(217, 208)
         Me.BtnUpdateLocker.Name = "BtnUpdateLocker"
         Me.BtnUpdateLocker.Size = New System.Drawing.Size(119, 28)
-        Me.BtnUpdateLocker.TabIndex = 10
+        Me.BtnUpdateLocker.TabIndex = 3
         Me.BtnUpdateLocker.Text = "Update Locker"
         Me.BtnUpdateLocker.UseVisualStyleBackColor = True
         '

@@ -35,9 +35,10 @@
     Private Sub DataGridViewMonitorLocker_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewMonitorLocker.CellClick
         Dim index As Integer = e.RowIndex
         Dim selectedRow As DataGridViewRow
-        selectedRow = DataGridViewMonitorLocker.Rows(index)
-
-        selectedLockerID = selectedRow.Cells(0).Value
+        If (index >= 0) Then
+            selectedRow = DataGridViewMonitorLocker.Rows(index)
+            selectedLockerID = selectedRow.Cells(0).Value
+        End If
     End Sub
 
     Private Sub BtnEditLocker_Click(sender As Object, e As EventArgs) Handles BtnEditLocker.Click
