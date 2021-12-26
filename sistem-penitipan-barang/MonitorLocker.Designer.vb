@@ -31,9 +31,14 @@ Partial Class MonitorLocker
         '
         'DataGridViewMonitorLocker
         '
+        Me.DataGridViewMonitorLocker.AllowUserToAddRows = False
+        Me.DataGridViewMonitorLocker.AllowUserToDeleteRows = False
+        Me.DataGridViewMonitorLocker.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridViewMonitorLocker.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewMonitorLocker.Location = New System.Drawing.Point(26, 70)
         Me.DataGridViewMonitorLocker.Name = "DataGridViewMonitorLocker"
+        Me.DataGridViewMonitorLocker.ReadOnly = True
+        Me.DataGridViewMonitorLocker.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.DataGridViewMonitorLocker.Size = New System.Drawing.Size(634, 250)
         Me.DataGridViewMonitorLocker.TabIndex = 0
         '
@@ -53,7 +58,7 @@ Partial Class MonitorLocker
         Me.BtnEditLocker.Location = New System.Drawing.Point(576, 343)
         Me.BtnEditLocker.Name = "BtnEditLocker"
         Me.BtnEditLocker.Size = New System.Drawing.Size(84, 28)
-        Me.BtnEditLocker.TabIndex = 2
+        Me.BtnEditLocker.TabIndex = 1
         Me.BtnEditLocker.Text = "Edit Locker"
         Me.BtnEditLocker.UseVisualStyleBackColor = True
         '

@@ -123,6 +123,7 @@
     <Compile Include="EditLocker.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Locker.vb" />
     <Compile Include="MonitorLocker.Designer.vb">
       <DependentUpon>MonitorLocker.vb</DependentUpon>
     </Compile>
