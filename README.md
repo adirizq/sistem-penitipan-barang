@@ -9,13 +9,13 @@ Merupakan sistem manajemen penitipan barang loker yang dilengkapi dengan perhitu
 
 ## Requirements Project
 
-# Class
+### Class
 1. Users
 2. Locker
 3. Jenis Locker
 4. Sewa
 
-# Form
+### Form
 1. Sign In
 2. Sign Up
 
@@ -33,7 +33,7 @@ Merupakan sistem manajemen penitipan barang loker yang dilengkapi dengan perhitu
 11. Update Jenis Locker
 12. Hapus Jenis Locker
 
-# Fitur
+### Fitur
 1. Dapat Sign In dan Sign Out
 2. User Adalah Maintainer Locker
 3. Form Monitor Locker berisi informasi status locker isi atau kosong dan info lain locker
@@ -44,7 +44,7 @@ Merupakan sistem manajemen penitipan barang loker yang dilengkapi dengan perhitu
 8. Penghitungan biaya sewa dihitung berdasarkan biaya di data jenis locker dikali lama penyewaan (jam).
 9. Kelebihan Pinjam pada form penyewaan terjadi saat waktu pengembalian telah melewati waktu rencana pinjam
 
-# Table
+### Table
 1. Users : (id, username, email, password)
 2. Locker : (id, id_ukuran, lokasi, status)
 3. Jenis_Ukuran : (id, ukuran, biaya)
