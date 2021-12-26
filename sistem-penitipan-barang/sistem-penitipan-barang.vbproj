@@ -117,6 +117,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSewa.Designer.vb">
+      <DependentUpon>DataSewa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataSewa.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="EditLocker.Designer.vb">
       <DependentUpon>EditLocker.vb</DependentUpon>
     </Compile>
@@ -134,6 +140,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -153,6 +160,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DataSewa.resx">
+      <DependentUpon>DataSewa.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditLocker.resx">
       <DependentUpon>EditLocker.vb</DependentUpon>
     </EmbeddedResource>

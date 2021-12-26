@@ -22,7 +22,7 @@ Public Class Locker
             dbConn.Open()
             sqlCommand.Connection = dbConn
             sqlCommand.CommandText = "SELECT
-                                        l.id AS 'ID',
+                                        l.id AS 'ID Locker',
                                         u.ukuran AS 'Ukuran',
                                         CONCAT('Rp.', u.biaya, '/Jam') AS 'Biaya',
                                         l.lokasi AS 'Lokasi',

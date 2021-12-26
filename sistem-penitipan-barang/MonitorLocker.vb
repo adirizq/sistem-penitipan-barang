@@ -51,5 +51,16 @@
         updateStatus.Show()
     End Sub
 
+    Private Sub DataSewaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DataSewaToolStripMenuItem.Click
+        Me.Close()
+        DataSewa.Show()
+    End Sub
 
+    Private Sub MonitorLocker_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        DataSewa.Show()
+    End Sub
+
+    Private Sub MonitorLockerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MonitorLockerToolStripMenuItem.Click
+        Me.Show()
+    End Sub
 End Class
