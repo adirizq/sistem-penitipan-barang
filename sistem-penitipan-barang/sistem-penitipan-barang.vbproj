@@ -117,6 +117,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddSewa.Designer.vb">
+      <DependentUpon>AddSewa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddSewa.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DataSewa.Designer.vb">
       <DependentUpon>DataSewa.vb</DependentUpon>
     </Compile>
@@ -160,6 +166,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddSewa.resx">
+      <DependentUpon>AddSewa.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DataSewa.resx">
       <DependentUpon>DataSewa.vb</DependentUpon>
     </EmbeddedResource>

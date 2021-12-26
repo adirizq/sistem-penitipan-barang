@@ -28,8 +28,8 @@ Partial Class DataSewa
         Me.DataGridViewDataSewa = New System.Windows.Forms.DataGridView()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.DataSewaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.JenisLockerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MonitorLockerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.JenisLockerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.DataGridViewDataSewa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -92,17 +92,17 @@ Partial Class DataSewa
         Me.DataSewaToolStripMenuItem.Size = New System.Drawing.Size(73, 20)
         Me.DataSewaToolStripMenuItem.Text = "Data Sewa"
         '
-        'JenisLockerToolStripMenuItem
-        '
-        Me.JenisLockerToolStripMenuItem.Name = "JenisLockerToolStripMenuItem"
-        Me.JenisLockerToolStripMenuItem.Size = New System.Drawing.Size(82, 20)
-        Me.JenisLockerToolStripMenuItem.Text = "Jenis Locker"
-        '
         'MonitorLockerToolStripMenuItem
         '
         Me.MonitorLockerToolStripMenuItem.Name = "MonitorLockerToolStripMenuItem"
         Me.MonitorLockerToolStripMenuItem.Size = New System.Drawing.Size(100, 20)
         Me.MonitorLockerToolStripMenuItem.Text = "Monitor Locker"
+        '
+        'JenisLockerToolStripMenuItem
+        '
+        Me.JenisLockerToolStripMenuItem.Name = "JenisLockerToolStripMenuItem"
+        Me.JenisLockerToolStripMenuItem.Size = New System.Drawing.Size(82, 20)
+        Me.JenisLockerToolStripMenuItem.Text = "Jenis Locker"
         '
         'DataSewa
         '
@@ -114,7 +114,9 @@ Partial Class DataSewa
         Me.Controls.Add(Me.titleLbl)
         Me.Controls.Add(Me.DataGridViewDataSewa)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(700, 455)
         Me.MinimumSize = New System.Drawing.Size(700, 455)
         Me.Name = "DataSewa"

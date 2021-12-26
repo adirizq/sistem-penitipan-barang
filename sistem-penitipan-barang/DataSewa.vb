@@ -8,4 +8,9 @@
     Private Sub DataSewaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DataSewaToolStripMenuItem.Click
         Me.Show()
     End Sub
+
+    Private Sub BtnTambahData_Click(sender As Object, e As EventArgs) Handles BtnTambahData.Click
+        Dim tambahSewa = New AddSewa
+        tambahSewa.Show()
+    End Sub
 End Class
