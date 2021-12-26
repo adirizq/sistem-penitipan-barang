@@ -19,16 +19,12 @@ Merupakan sistem manajemen penitipan barang loker yang dilengkapi dengan perhitu
 ### Form
 1. Sign In
 2. Sign Up
-
 3. Form Sewa (menampilkan form dengan textbox rencana sewa (waktu) dan akan tampil biaya sewa total ”Hanya Input Sewa dan Waktu sewa (dalam jam)”)
 4. Form Kembali  
-
 5. Form Monitor Locker (Data Grid View Locker)
 6. Edit Locker 
 7. Ganti Status Locker (Isi, Kosong)
-
 8. Form Data Sewa (Data Grid View Sewa)
-
 9. Form Jenis Locker (Data Grid View Jenis Locker)
 10. Tambah Jenis Locker
 11. Update Jenis Locker
