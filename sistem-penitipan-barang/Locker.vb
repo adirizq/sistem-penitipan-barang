@@ -16,23 +16,75 @@ Public Class Locker
     Public Function GetDataLockerDatabase() As DataTable
         Dim result As New DataTable
 
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
+        Try
+            dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
             + "password =" + password + ";" + "database =" + database
-        dbConn.Open()
-        sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT
-                                  l.id AS 'ID',
-                                  u.ukuran AS 'Ukuran',
-                                  CONCAT('Rp.', u.biaya, '/Jam') AS 'Biaya',
-                                  l.lokasi AS 'Lokasi',
-                                  l.status AS 'Status'
-                                  FROM locker l JOIN jenis_ukuran u"
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlCommand.CommandText = "SELECT
+                                        l.id AS 'ID',
+                                        u.ukuran AS 'Ukuran',
+                                        CONCAT('Rp.', u.biaya, '/Jam') AS 'Biaya',
+                                        l.lokasi AS 'Lokasi',
+                                        l.status AS 'Status'
+                                        FROM locker l JOIN jenis_ukuran u"
 
-        sqlRead = sqlCommand.ExecuteReader
+            sqlRead = sqlCommand.ExecuteReader
 
-        result.Load(sqlRead)
-        sqlRead.Close()
-        dbConn.Close()
-        Return result
+            result.Load(sqlRead)
+            sqlRead.Close()
+            dbConn.Close()
+            Return result
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString())
+        Finally
+            dbConn.Dispose()
+        End Try
+    End Function
+
+    Public Function GetLockerStatusByID(ID As Integer) As String
+        Dim result As String
+
+        Try
+            dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
+            + "password =" + password + ";" + "database =" + database
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlCommand.CommandText = "SELECT status FROM locker WHERE id=" & ID
+
+            sqlRead = sqlCommand.ExecuteReader
+
+            If (sqlRead.Read()) Then
+                result = sqlRead.GetString(0)
+            End If
+
+            sqlRead.Close()
+            dbConn.Close()
+            Return result
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString())
+        Finally
+            dbConn.Dispose()
+        End Try
+    End Function
+
+    Public Function UpdateLockerStatusByID(ID As Integer, status As String)
+        Try
+            dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
+            + "password =" + password + ";" + "database =" + database
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlCommand.CommandText = "UPDATE locker SET status='" & status & "' " &
+                                     "WHERE id=" & ID
+
+            sqlRead = sqlCommand.ExecuteReader
+
+            sqlRead.Close()
+            dbConn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString())
+        Finally
+            dbConn.Dispose()
+        End Try
     End Function
 End Class
