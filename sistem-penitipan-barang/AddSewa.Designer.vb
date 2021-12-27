@@ -51,6 +51,7 @@ Partial Class AddSewa
         '
         'CBUkuran
         '
+        Me.CBUkuran.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CBUkuran.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CBUkuran.FormattingEnabled = True
         Me.CBUkuran.Location = New System.Drawing.Point(133, 90)
@@ -88,6 +89,7 @@ Partial Class AddSewa
         '
         'CBLocker
         '
+        Me.CBLocker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CBLocker.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CBLocker.FormattingEnabled = True
         Me.CBLocker.Location = New System.Drawing.Point(133, 135)

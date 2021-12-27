@@ -60,6 +60,7 @@ Partial Class EditLocker
         '
         'CBUkuran
         '
+        Me.CBUkuran.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CBUkuran.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CBUkuran.FormattingEnabled = True
         Me.CBUkuran.Location = New System.Drawing.Point(124, 77)

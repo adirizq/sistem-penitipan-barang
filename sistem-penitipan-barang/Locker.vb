@@ -6,7 +6,6 @@ Public Class Locker
     Public Shared dbConn As New MySqlConnection
     Public Shared sqlCommand As New MySqlCommand
     Public Shared sqlRead As MySqlDataReader
-    Private sqlQuery As String
 
     Private server As String = "127.0.0.1"
     Private username As String = "root"
@@ -22,7 +21,7 @@ Public Class Locker
             dbConn.Open()
             sqlCommand.Connection = dbConn
             sqlCommand.CommandText = "SELECT
-                                        l.id AS 'ID Locker',
+                                        l.id AS 'No Locker',
                                         u.ukuran AS 'Ukuran',
                                         CONCAT('Rp.', u.biaya, '/Jam') AS 'Biaya',
                                         l.lokasi AS 'Lokasi',
