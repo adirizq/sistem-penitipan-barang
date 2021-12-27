@@ -13,4 +13,13 @@
         Dim tambahSewa = New AddSewa
         tambahSewa.Show()
     End Sub
+
+    Private Sub DataSewa_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        Me.CenterToScreen()
+    End Sub
+
+    Private Sub BtnPengembalian_Click(sender As Object, e As EventArgs) Handles BtnPengembalian.Click
+        Dim pengembalianBarang = New PengembalianBarang
+        pengembalianBarang.Show()
+    End Sub
 End Class

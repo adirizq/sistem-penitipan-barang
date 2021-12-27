@@ -40,11 +40,14 @@ Partial Class AddSewa
         '
         Me.titleLbl.AutoSize = True
         Me.titleLbl.Font = New System.Drawing.Font("Microsoft Tai Le", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.titleLbl.Location = New System.Drawing.Point(20, 20)
+        Me.titleLbl.Location = New System.Drawing.Point(0, 25)
+        Me.titleLbl.MaximumSize = New System.Drawing.Size(373, 34)
+        Me.titleLbl.MinimumSize = New System.Drawing.Size(373, 34)
         Me.titleLbl.Name = "titleLbl"
-        Me.titleLbl.Size = New System.Drawing.Size(261, 34)
+        Me.titleLbl.Size = New System.Drawing.Size(373, 34)
         Me.titleLbl.TabIndex = 0
         Me.titleLbl.Text = "Tambah Data Sewa"
+        Me.titleLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'CBUkuran
         '
@@ -98,9 +101,9 @@ Partial Class AddSewa
         Me.LblLocker.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblLocker.Location = New System.Drawing.Point(23, 138)
         Me.LblLocker.Name = "LblLocker"
-        Me.LblLocker.Size = New System.Drawing.Size(46, 16)
+        Me.LblLocker.Size = New System.Drawing.Size(68, 16)
         Me.LblLocker.TabIndex = 13
-        Me.LblLocker.Text = "Locker"
+        Me.LblLocker.Text = "No Locker"
         '
         'Lbl1
         '
@@ -119,11 +122,11 @@ Partial Class AddSewa
         '
         Me.LblBiayaSewa.AutoSize = True
         Me.LblBiayaSewa.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblBiayaSewa.Location = New System.Drawing.Point(23, 242)
-        Me.LblBiayaSewa.MaximumSize = New System.Drawing.Size(322, 0)
-        Me.LblBiayaSewa.MinimumSize = New System.Drawing.Size(322, 0)
+        Me.LblBiayaSewa.Location = New System.Drawing.Point(0, 242)
+        Me.LblBiayaSewa.MaximumSize = New System.Drawing.Size(373, 16)
+        Me.LblBiayaSewa.MinimumSize = New System.Drawing.Size(373, 16)
         Me.LblBiayaSewa.Name = "LblBiayaSewa"
-        Me.LblBiayaSewa.Size = New System.Drawing.Size(322, 16)
+        Me.LblBiayaSewa.Size = New System.Drawing.Size(373, 16)
         Me.LblBiayaSewa.TabIndex = 11
         Me.LblBiayaSewa.Text = "Biaya Sewa"
         Me.LblBiayaSewa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -132,11 +135,11 @@ Partial Class AddSewa
         '
         Me.LblBiayaSewaValue.AutoSize = True
         Me.LblBiayaSewaValue.Font = New System.Drawing.Font("Microsoft Tai Le", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblBiayaSewaValue.Location = New System.Drawing.Point(20, 267)
-        Me.LblBiayaSewaValue.MaximumSize = New System.Drawing.Size(325, 0)
-        Me.LblBiayaSewaValue.MinimumSize = New System.Drawing.Size(325, 0)
+        Me.LblBiayaSewaValue.Location = New System.Drawing.Point(0, 267)
+        Me.LblBiayaSewaValue.MaximumSize = New System.Drawing.Size(373, 31)
+        Me.LblBiayaSewaValue.MinimumSize = New System.Drawing.Size(373, 31)
         Me.LblBiayaSewaValue.Name = "LblBiayaSewaValue"
-        Me.LblBiayaSewaValue.Size = New System.Drawing.Size(325, 31)
+        Me.LblBiayaSewaValue.Size = New System.Drawing.Size(373, 31)
         Me.LblBiayaSewaValue.TabIndex = 11
         Me.LblBiayaSewaValue.Text = "Rp.100000"
         Me.LblBiayaSewaValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -145,11 +148,11 @@ Partial Class AddSewa
         '
         Me.LblWarn.AutoSize = True
         Me.LblWarn.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblWarn.Location = New System.Drawing.Point(23, 316)
-        Me.LblWarn.MaximumSize = New System.Drawing.Size(322, 0)
-        Me.LblWarn.MinimumSize = New System.Drawing.Size(322, 0)
+        Me.LblWarn.Location = New System.Drawing.Point(25, 310)
+        Me.LblWarn.MaximumSize = New System.Drawing.Size(323, 32)
+        Me.LblWarn.MinimumSize = New System.Drawing.Size(323, 32)
         Me.LblWarn.Name = "LblWarn"
-        Me.LblWarn.Size = New System.Drawing.Size(322, 32)
+        Me.LblWarn.Size = New System.Drawing.Size(323, 32)
         Me.LblWarn.TabIndex = 11
         Me.LblWarn.Text = "*Tidak termasuk denda keterlambatan pengambilan barang"
         Me.LblWarn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -157,9 +160,11 @@ Partial Class AddSewa
         'btnTambah
         '
         Me.btnTambah.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTambah.Location = New System.Drawing.Point(261, 374)
+        Me.btnTambah.Location = New System.Drawing.Point(25, 374)
+        Me.btnTambah.MaximumSize = New System.Drawing.Size(323, 32)
+        Me.btnTambah.MinimumSize = New System.Drawing.Size(323, 32)
         Me.btnTambah.Name = "btnTambah"
-        Me.btnTambah.Size = New System.Drawing.Size(84, 28)
+        Me.btnTambah.Size = New System.Drawing.Size(323, 32)
         Me.btnTambah.TabIndex = 4
         Me.btnTambah.Text = "Tambah"
         Me.btnTambah.UseVisualStyleBackColor = True
