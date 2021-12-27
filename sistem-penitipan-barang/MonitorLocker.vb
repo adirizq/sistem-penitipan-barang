@@ -1,6 +1,7 @@
 ﻿Public Class MonitorLocker
 
     Public Shared Locker As Locker
+
     Public Shared selectedLockerID As Integer
 
     Public Sub New()
@@ -9,7 +10,7 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        Locker = New Locker()
+        Locker = DataSewa.Locker
         ReloadDataTableDatabase()
 
         If (DataGridViewMonitorLocker.Rows.Count > 0) Then

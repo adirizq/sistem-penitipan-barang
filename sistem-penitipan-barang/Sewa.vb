@@ -42,4 +42,31 @@ Public Class Sewa
             dbConn.Dispose()
         End Try
     End Function
+
+    Public Function InsertDataSewaDatabase(idLocker As Integer, bayarSebelumPinjam As Integer, rencanaPinjam As Integer)
+        Try
+            dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
+            + "password =" + password + ";" + "database =" + database
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlCommand.CommandText = "INSERT INTO penyewaan (
+                                        id_locker, tanggal_sewa, tanggal_kembali, bayar_sebelum_pinjam, rencana_pinjam,
+                                        kelebihan_pinjam, total_bayar) VALUES (" & idLocker & ", '" &
+                                        DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") & "', NULL, " & bayarSebelumPinjam & ", " & rencanaPinjam &
+                                        ", 0, " & bayarSebelumPinjam & ")"
+
+            sqlRead = sqlCommand.ExecuteReader
+
+            DataSewa.Locker.UpdateLockerStatusByID(idLocker, "Terisi")
+
+            MessageBox.Show("Berhasil menambahkan data sewa")
+
+            sqlRead.Close()
+            dbConn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString())
+        Finally
+            dbConn.Dispose()
+        End Try
+    End Function
 End Class
