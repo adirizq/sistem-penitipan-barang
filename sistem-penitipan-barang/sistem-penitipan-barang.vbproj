@@ -164,6 +164,7 @@
     <Compile Include="PengembalianBarang.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Sewa.vb" />
     <Compile Include="UpdateStatusLocker.Designer.vb">
       <DependentUpon>UpdateStatusLocker.vb</DependentUpon>
     </Compile>

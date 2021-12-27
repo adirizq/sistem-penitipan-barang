@@ -1,4 +1,23 @@
 ﻿Public Class DataSewa
+
+    Public Shared Sewa As Sewa
+
+    Public Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        Sewa = New Sewa()
+
+        ReloadDataTableDatabase()
+
+    End Sub
+
+    Private Sub ReloadDataTableDatabase()
+        DataGridViewDataSewa.DataSource = Sewa.GetDataSewaDatabase()
+    End Sub
+
     Private Sub MonitorLockerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MonitorLockerToolStripMenuItem.Click
         Dim monitorLocker = New MonitorLocker
         monitorLocker.Show()

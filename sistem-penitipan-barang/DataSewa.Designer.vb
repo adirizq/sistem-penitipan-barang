@@ -37,7 +37,7 @@ Partial Class DataSewa
         'BtnPengembalian
         '
         Me.BtnPengembalian.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnPengembalian.Location = New System.Drawing.Point(350, 363)
+        Me.BtnPengembalian.Location = New System.Drawing.Point(750, 563)
         Me.BtnPengembalian.Name = "BtnPengembalian"
         Me.BtnPengembalian.Size = New System.Drawing.Size(151, 28)
         Me.BtnPengembalian.TabIndex = 6
@@ -47,7 +47,7 @@ Partial Class DataSewa
         'BtnTambahData
         '
         Me.BtnTambahData.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnTambahData.Location = New System.Drawing.Point(517, 363)
+        Me.BtnTambahData.Location = New System.Drawing.Point(917, 563)
         Me.BtnTambahData.Name = "BtnTambahData"
         Me.BtnTambahData.Size = New System.Drawing.Size(143, 28)
         Me.BtnTambahData.TabIndex = 4
@@ -73,8 +73,8 @@ Partial Class DataSewa
         Me.DataGridViewDataSewa.Location = New System.Drawing.Point(26, 90)
         Me.DataGridViewDataSewa.Name = "DataGridViewDataSewa"
         Me.DataGridViewDataSewa.ReadOnly = True
-        Me.DataGridViewDataSewa.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
-        Me.DataGridViewDataSewa.Size = New System.Drawing.Size(634, 250)
+        Me.DataGridViewDataSewa.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.DataGridViewDataSewa.Size = New System.Drawing.Size(1034, 450)
         Me.DataGridViewDataSewa.TabIndex = 3
         '
         'MenuStrip1
@@ -82,7 +82,7 @@ Partial Class DataSewa
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataSewaToolStripMenuItem, Me.MonitorLockerToolStripMenuItem, Me.JenisLockerToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(684, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1084, 24)
         Me.MenuStrip1.TabIndex = 7
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -108,7 +108,7 @@ Partial Class DataSewa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(684, 416)
+        Me.ClientSize = New System.Drawing.Size(1084, 616)
         Me.Controls.Add(Me.BtnPengembalian)
         Me.Controls.Add(Me.BtnTambahData)
         Me.Controls.Add(Me.titleLbl)
@@ -117,8 +117,8 @@ Partial Class DataSewa
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(700, 455)
-        Me.MinimumSize = New System.Drawing.Size(700, 455)
+        Me.MaximumSize = New System.Drawing.Size(1100, 655)
+        Me.MinimumSize = New System.Drawing.Size(1100, 655)
         Me.Name = "DataSewa"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Data Sewa"
