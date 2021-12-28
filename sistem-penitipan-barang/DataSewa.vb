@@ -3,7 +3,7 @@
     Public Shared Sewa As Sewa
     Public Shared Locker As Locker
 
-    Public Shared selectedLockerID As Integer
+    Public Shared selectedSewaID As Integer
 
     Public Sub New()
 
@@ -18,7 +18,7 @@
 
         If (DataGridViewDataSewa.Rows.Count > 0) Then
             DataGridViewDataSewa.Rows(0).Cells(0).Selected = True
-            selectedLockerID = DataGridViewDataSewa.Rows(0).Cells(0).Value
+            selectedSewaID = DataGridViewDataSewa.Rows(0).Cells(0).Value
         End If
 
     End Sub
@@ -34,7 +34,7 @@
 
         If (DataGridViewDataSewa.Rows.Count > 0) Then
             DataGridViewDataSewa.Rows(0).Cells(0).Selected = True
-            selectedLockerID = DataGridViewDataSewa.Rows(0).Cells(0).Value
+            selectedSewaID = DataGridViewDataSewa.Rows(0).Cells(0).Value
         End If
     End Sub
 
@@ -56,5 +56,14 @@
     Private Sub BtnPengembalian_Click(sender As Object, e As EventArgs) Handles BtnPengembalian.Click
         Dim pengembalianBarang = New PengembalianBarang
         pengembalianBarang.Show()
+    End Sub
+
+    Private Sub DataGridViewDataSewa_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewDataSewa.CellClick
+        Dim index As Integer = e.RowIndex
+        Dim selectedRow As DataGridViewRow
+        If (index >= 0) Then
+            selectedRow = DataGridViewDataSewa.Rows(index)
+            selectedSewaID = selectedRow.Cells(0).Value
+        End If
     End Sub
 End Class

@@ -43,6 +43,41 @@ Public Class Sewa
         End Try
     End Function
 
+    Public Function GetDataSewaByID(ID As Integer) As List(Of String)
+        Dim result As New List(Of String)
+
+        Try
+            dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
+            + "password =" + password + ";" + "database =" + database
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlCommand.CommandText = "SELECT id, id_locker, tanggal_sewa, tanggal_kembali,
+                                      bayar_sebelum_pinjam, rencana_pinjam, kelebihan_pinjam, total_bayar 
+                                      FROM penyewaan WHERE id=" & ID
+
+            sqlRead = sqlCommand.ExecuteReader
+
+            If (sqlRead.Read()) Then
+                result.Add(sqlRead.GetValue(0))
+                result.Add(sqlRead.GetValue(1))
+                result.Add(sqlRead.GetValue(2))
+                result.Add(DateAndTime.Now)
+                result.Add(sqlRead.GetValue(4))
+                result.Add(sqlRead.GetValue(5))
+                result.Add(sqlRead.GetValue(6))
+                result.Add(sqlRead.GetValue(7))
+            End If
+
+            sqlRead.Close()
+            dbConn.Close()
+            Return result
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString())
+        Finally
+            dbConn.Dispose()
+        End Try
+    End Function
+
     Public Function InsertDataSewaDatabase(idLocker As Integer, bayarSebelumPinjam As Integer, rencanaPinjam As Integer)
         Try
             dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
