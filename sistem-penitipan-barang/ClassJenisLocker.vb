@@ -43,9 +43,9 @@ Public Class ClassJenisLocker
             dbConn.Open()
             sqlCommand.Connection = dbConn
             sqlCommand.CommandText = "SELECT
-                                        l.id AS 'ID',
+                                        id AS 'ID',
                                         ukuran AS 'Ukuran',
-                                        CONCAT('Rp.', biaya, '/Jam') AS 'Biaya',
+                                        CONCAT('Rp.', biaya, '/Jam') AS 'Biaya'
                                         FROM jenis_ukuran"
 
             sqlRead = sqlCommand.ExecuteReader
@@ -68,9 +68,9 @@ Public Class ClassJenisLocker
         Try
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            sqlQuery = "INSERT INTO jenis_ukuran(ukuran, biaya) VALUE(
+            sqlQuery = "INSERT INTO jenis_ukuran(ukuran, biaya) VALUES(
             '" & ukuranLocker & "',
-            '" & biayaLocker & "',)"
+            '" & biayaLocker & "')"
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
             sqlRead = sqlCommand.ExecuteReader
@@ -81,7 +81,7 @@ Public Class ClassJenisLocker
             dbConn.Close()
 
         Catch ex As Exception
-            Return ex.Message
+            MessageBox.Show(ex.ToString())
         Finally
             dbConn.Dispose()
         End Try

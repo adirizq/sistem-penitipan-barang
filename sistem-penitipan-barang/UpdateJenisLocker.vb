@@ -13,8 +13,7 @@
         JenisLocker.ClassJenisLocker.ukuranJenisLocker = txtUkuran.Text.ToString()
         JenisLocker.ClassJenisLocker.biayaJenisLocker = Integer.Parse(TxtBiaya.Text)
 
-        JenisLocker.ClassJenisLocker.AddDataJenisUkuranDatabase(JenisLocker.ClassJenisLocker.ukuranJenisLocker,
-                                                                JenisLocker.ClassJenisLocker.biayaJenisLocker)
+        JenisLocker.ClassJenisLocker.UpdateJenisUkuranByID(JenisLocker.selectedJenisLockerID, JenisLocker.ClassJenisLocker.biayaJenisLocker, JenisLocker.ClassJenisLocker.ukuranJenisLocker)
 
         Dim BukaJenisLocker = New JenisLocker()
         BukaJenisLocker.Show()

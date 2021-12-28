@@ -44,18 +44,15 @@
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
         Dim tambahJenisLocker = New TambahJenisLocker
         tambahJenisLocker.Show()
-        Me.Close()
     End Sub
 
     Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
         Dim updateJenisLocker = New UpdateJenisLocker
         updateJenisLocker.Show()
-        Me.Close()
     End Sub
 
     Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles BtnHapus.Click
         Dim hapusJenisLocker = New HapusJenisLocker
         hapusJenisLocker.Show()
-        Me.Close()
     End Sub
 End Class
