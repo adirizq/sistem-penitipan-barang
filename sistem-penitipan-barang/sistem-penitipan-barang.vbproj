@@ -117,6 +117,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Sewa.vb" />
+    <Compile Include="Locker.vb" />
+    <Compile Include="ClassJenisLocker.vb" />
     <Compile Include="AddSewa.Designer.vb">
       <DependentUpon>AddSewa.vb</DependentUpon>
     </Compile>
@@ -129,7 +132,12 @@
     <Compile Include="DataSewa.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClassJenisLocker.vb" />
+    <Compile Include="MonitorLocker.Designer.vb">
+      <DependentUpon>MonitorLocker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MonitorLocker.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="EditLocker.Designer.vb">
       <DependentUpon>EditLocker.vb</DependentUpon>
     </Compile>
@@ -148,36 +156,12 @@
     <Compile Include="JenisLocker.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Locker.vb" />
-    <Compile Include="MonitorLocker.Designer.vb">
-      <DependentUpon>MonitorLocker.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MonitorLocker.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="My Project\AssemblyInfo.vb" />
-    <Compile Include="My Project\Application.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Application.myapp</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="My Project\Settings.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
     <Compile Include="PengembalianBarang.Designer.vb">
       <DependentUpon>PengembalianBarang.vb</DependentUpon>
     </Compile>
     <Compile Include="PengembalianBarang.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sewa.vb" />
     <Compile Include="TambahJenisLocker.Designer.vb">
       <DependentUpon>TambahJenisLocker.vb</DependentUpon>
     </Compile>
@@ -195,6 +179,22 @@
     </Compile>
     <Compile Include="UpdateStatusLocker.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -216,14 +216,9 @@
     <EmbeddedResource Include="MonitorLocker.resx">
       <DependentUpon>MonitorLocker.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="My Project\Resources.resx">
-      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
-      <CustomToolNamespace>My.Resources</CustomToolNamespace>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="PengembalianBarang.resx">
       <DependentUpon>PengembalianBarang.vb</DependentUpon>
+    </EmbeddedResource> 
     <EmbeddedResource Include="TambahJenisLocker.resx">
       <DependentUpon>TambahJenisLocker.vb</DependentUpon>
     </EmbeddedResource>
@@ -232,6 +227,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateStatusLocker.resx">
       <DependentUpon>UpdateStatusLocker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

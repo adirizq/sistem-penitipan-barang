@@ -2,6 +2,7 @@
 
     Public Shared Sewa As Sewa
     Public Shared Locker As Locker
+    Public Shared ClassJenisLocker As ClassJenisLocker
 
     Public Shared selectedSewaID As Integer
     Private currIndex
@@ -14,6 +15,7 @@
         ' Add any initialization after the InitializeComponent() call.
         Sewa = New Sewa()
         Locker = New Locker()
+        ClassJenisLocker = New ClassJenisLocker()
 
         ReloadDataTableDatabase()
 
@@ -39,14 +41,20 @@
         End If
     End Sub
 
+    Private Sub DataSewaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DataSewaToolStripMenuItem.Click
+        Me.Show()
+    End Sub
+
     Private Sub MonitorLockerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MonitorLockerToolStripMenuItem.Click
         Dim monitorLocker = New MonitorLocker
         monitorLocker.Show()
         Me.Hide()
     End Sub
 
-    Private Sub DataSewaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DataSewaToolStripMenuItem.Click
-        Me.Show()
+    Private Sub JenisLockerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles JenisLockerToolStripMenuItem.Click
+        Dim jenisLocker = New JenisLocker
+        jenisLocker.Show()
+        Me.Hide()
     End Sub
 
     Private Sub BtnTambahData_Click(sender As Object, e As EventArgs) Handles BtnTambahData.Click
