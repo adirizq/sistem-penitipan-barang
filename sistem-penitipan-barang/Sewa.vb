@@ -200,7 +200,7 @@ Public Class Sewa
         End Try
     End Function
 
-    Public Function UpdatePengembalianSewaByID(ID As Integer)
+    Public Function UpdatePengembalianSewaByID(ID As Integer, IdLocker As Integer)
         Try
             dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
             + "password =" + password + ";" + "database =" + database
@@ -209,6 +209,8 @@ Public Class Sewa
             sqlCommand.CommandText = "UPDATE penyewaan SET " &
                                         "tanggal_kembali = '" & DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") & "' " &
                                         "WHERE id = " & ID
+
+            DataSewa.Locker.UpdateLockerStatusByID(IdLocker, "Kosong")
 
             sqlRead = sqlCommand.ExecuteReader
             sqlRead.Close()

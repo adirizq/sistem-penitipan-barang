@@ -28,7 +28,7 @@
     End Sub
 
     Private Sub btnKonfirmasi_Click(sender As Object, e As EventArgs) Handles btnKonfirmasi.Click
-        DataSewa.Sewa.UpdatePengembalianSewaByID(dataSewaInformation(0))
+        DataSewa.Sewa.UpdatePengembalianSewaByID(dataSewaInformation(0), dataSewaInformation(1))
         Me.Close()
     End Sub
 End Class
