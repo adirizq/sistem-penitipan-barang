@@ -5,7 +5,6 @@
     Public Shared ClassJenisLocker As ClassJenisLocker
 
     Public Shared selectedSewaID As Integer
-    Private currIndex
 
     Public Sub New()
 
@@ -21,7 +20,6 @@
 
         If (DataGridViewDataSewa.Rows.Count > 0) Then
             selectedSewaID = DataGridViewDataSewa.Rows(0).Cells(0).Value
-            currIndex = DataGridViewDataSewa.CurrentRow
         End If
 
     End Sub
@@ -36,8 +34,8 @@
         ReloadDataTableDatabase()
 
         If (DataGridViewDataSewa.Rows.Count > 0) Then
-            DataGridViewDataSewa.CurrentCell = DataGridViewDataSewa.Rows(currIndex).Cells(0)
-            DataGridViewDataSewa.Rows(currIndex).Selected = True
+            DataGridViewDataSewa.CurrentCell = DataGridViewDataSewa.Rows(0).Cells(0)
+            selectedSewaID = DataGridViewDataSewa.Rows(0).Cells(0).Value
         End If
     End Sub
 
@@ -75,7 +73,6 @@
 
     Private Sub DataGridViewDataSewa_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewDataSewa.CellClick
         Dim index As Integer = e.RowIndex
-        currIndex = e.RowIndex
         Dim selectedRow As DataGridViewRow
         If (index >= 0) Then
             selectedRow = DataGridViewDataSewa.Rows(index)
