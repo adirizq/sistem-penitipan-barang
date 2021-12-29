@@ -126,9 +126,12 @@ Partial Class JenisLocker
         Me.Controls.Add(Me.BtnHapus)
         Me.Controls.Add(Me.titleLbl)
         Me.Controls.Add(Me.DataGridViewJenisLocker)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(700, 455)
         Me.MinimumSize = New System.Drawing.Size(700, 455)
         Me.Name = "JenisLocker"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "JenisLocker"
         CType(Me.DataGridViewJenisLocker, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)

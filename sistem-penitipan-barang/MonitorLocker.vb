@@ -4,6 +4,8 @@
 
     Public Shared selectedLockerID As Integer
 
+    Private toJenisLocker = False
+
     Public Sub New()
 
         ' This call is required by the designer.
@@ -57,11 +59,21 @@
         DataSewa.Show()
     End Sub
 
-    Private Sub MonitorLocker_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        DataSewa.Show()
-    End Sub
-
     Private Sub MonitorLockerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MonitorLockerToolStripMenuItem.Click
         Me.Show()
     End Sub
+
+    Private Sub JenisLockerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles JenisLockerToolStripMenuItem.Click
+        toJenisLocker = True
+        Me.Close()
+        Dim jenisLocker = New JenisLocker
+        jenisLocker.Show()
+    End Sub
+
+    Private Sub MonitorLocker_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        If Not toJenisLocker Then
+            DataSewa.Show()
+        End If
+    End Sub
+
 End Class
