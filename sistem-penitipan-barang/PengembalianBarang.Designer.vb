@@ -29,8 +29,8 @@ Partial Class PengembalianBarang
         Me.LblNoSewaValue = New System.Windows.Forms.Label()
         Me.LblLocker = New System.Windows.Forms.Label()
         Me.LblNoLockerValue = New System.Windows.Forms.Label()
-        Me.LblLokasi = New System.Windows.Forms.Label()
-        Me.LblLokasiValue = New System.Windows.Forms.Label()
+        Me.LblKeterlambatan = New System.Windows.Forms.Label()
+        Me.LblKeterlambatanValue = New System.Windows.Forms.Label()
         Me.btnKonfirmasi = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -127,31 +127,31 @@ Partial Class PengembalianBarang
         Me.LblNoLockerValue.Text = "1"
         Me.LblNoLockerValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'LblLokasi
+        'LblKeterlambatan
         '
-        Me.LblLokasi.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LblLokasi.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblLokasi.Location = New System.Drawing.Point(0, 206)
-        Me.LblLokasi.MaximumSize = New System.Drawing.Size(373, 16)
-        Me.LblLokasi.MinimumSize = New System.Drawing.Size(373, 16)
-        Me.LblLokasi.Name = "LblLokasi"
-        Me.LblLokasi.Size = New System.Drawing.Size(373, 16)
-        Me.LblLokasi.TabIndex = 18
-        Me.LblLokasi.Text = "Lokasi :"
-        Me.LblLokasi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LblKeterlambatan.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblKeterlambatan.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblKeterlambatan.Location = New System.Drawing.Point(0, 206)
+        Me.LblKeterlambatan.MaximumSize = New System.Drawing.Size(373, 16)
+        Me.LblKeterlambatan.MinimumSize = New System.Drawing.Size(373, 16)
+        Me.LblKeterlambatan.Name = "LblKeterlambatan"
+        Me.LblKeterlambatan.Size = New System.Drawing.Size(373, 16)
+        Me.LblKeterlambatan.TabIndex = 18
+        Me.LblKeterlambatan.Text = "Keterlambatan :"
+        Me.LblKeterlambatan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'LblLokasiValue
+        'LblKeterlambatanValue
         '
-        Me.LblLokasiValue.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LblLokasiValue.Font = New System.Drawing.Font("Microsoft Tai Le", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblLokasiValue.Location = New System.Drawing.Point(0, 228)
-        Me.LblLokasiValue.MaximumSize = New System.Drawing.Size(373, 21)
-        Me.LblLokasiValue.MinimumSize = New System.Drawing.Size(373, 21)
-        Me.LblLokasiValue.Name = "LblLokasiValue"
-        Me.LblLokasiValue.Size = New System.Drawing.Size(373, 21)
-        Me.LblLokasiValue.TabIndex = 18
-        Me.LblLokasiValue.Text = "AA"
-        Me.LblLokasiValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LblKeterlambatanValue.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblKeterlambatanValue.Font = New System.Drawing.Font("Microsoft Tai Le", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblKeterlambatanValue.Location = New System.Drawing.Point(0, 228)
+        Me.LblKeterlambatanValue.MaximumSize = New System.Drawing.Size(373, 21)
+        Me.LblKeterlambatanValue.MinimumSize = New System.Drawing.Size(373, 21)
+        Me.LblKeterlambatanValue.Name = "LblKeterlambatanValue"
+        Me.LblKeterlambatanValue.Size = New System.Drawing.Size(373, 21)
+        Me.LblKeterlambatanValue.TabIndex = 18
+        Me.LblKeterlambatanValue.Text = "AA"
+        Me.LblKeterlambatanValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnKonfirmasi
         '
@@ -172,8 +172,8 @@ Partial Class PengembalianBarang
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(373, 434)
         Me.Controls.Add(Me.btnKonfirmasi)
-        Me.Controls.Add(Me.LblLokasiValue)
-        Me.Controls.Add(Me.LblLokasi)
+        Me.Controls.Add(Me.LblKeterlambatanValue)
+        Me.Controls.Add(Me.LblKeterlambatan)
         Me.Controls.Add(Me.LblNoLockerValue)
         Me.Controls.Add(Me.LblLocker)
         Me.Controls.Add(Me.LblNoSewaValue)
@@ -198,7 +198,7 @@ Partial Class PengembalianBarang
     Friend WithEvents LblNoSewaValue As Label
     Friend WithEvents LblLocker As Label
     Friend WithEvents LblNoLockerValue As Label
-    Friend WithEvents LblLokasi As Label
-    Friend WithEvents LblLokasiValue As Label
+    Friend WithEvents LblKeterlambatan As Label
+    Friend WithEvents LblKeterlambatanValue As Label
     Friend WithEvents btnKonfirmasi As Button
 End Class

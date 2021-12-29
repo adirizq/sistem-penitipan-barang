@@ -14,14 +14,21 @@
         LblNoLockerValue.Text = dataSewaInformation(1)
 
         Dim waktuPenyewaan As Date = dataSewaInformation(2)
-        Dim totalDurasi As TimeSpan = DateAndTime.Now - waktuPenyewaan
+        Dim durasiTs As TimeSpan = DateAndTime.Now - waktuPenyewaan
+        Dim totalDurasiJam As Integer = Math.Ceiling(Convert.ToInt32(durasiTs.TotalMinutes) / 60)
 
-        Dim durasiInt = Convert.ToInt32(totalDurasi.TotalHours)
-
-        LblDendaValue.Text = durasiInt.ToString()
-        LblLokasiValue.Text = totalDurasi.ToString()
-        LblDenda.Text = (Convert.ToInt32(totalDurasi.TotalMinutes) Mod 60).ToString()
+        If totalDurasiJam > dataSewaInformation(5) Then
+            LblKeterlambatanValue.Text = (totalDurasiJam - dataSewaInformation(5)).ToString() + " Jam"
+            LblDendaValue.Text = "Rp." + (Integer.Parse(dataSewaInformation(6)).ToString("#,#"))
+        Else
+            LblKeterlambatanValue.Text = "0 Jam"
+            LblDendaValue.Text = "Rp.0"
+        End If
 
     End Sub
 
+    Private Sub btnKonfirmasi_Click(sender As Object, e As EventArgs) Handles btnKonfirmasi.Click
+        DataSewa.Sewa.UpdatePengembalianSewaByID(dataSewaInformation(0))
+        Me.Close()
+    End Sub
 End Class
