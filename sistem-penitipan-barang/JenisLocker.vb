@@ -9,7 +9,7 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        ClassJenisLocker = New ClassJenisLocker()
+        ClassJenisLocker = DataSewa.ClassJenisLocker
         ReloadDataTableDatabase()
 
         If (DataGridViewJenisLocker.Rows.Count > 0) Then
