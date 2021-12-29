@@ -15,8 +15,6 @@
         JenisLocker.ClassJenisLocker.AddDataJenisUkuranDatabase(JenisLocker.ClassJenisLocker.ukuranJenisLocker,
                                                                 JenisLocker.ClassJenisLocker.biayaJenisLocker)
 
-        Dim BukaJenisLocker = New JenisLocker()
-        BukaJenisLocker.Show()
         Me.Close()
     End Sub
 End Class

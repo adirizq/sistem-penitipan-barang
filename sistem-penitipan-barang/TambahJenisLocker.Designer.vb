@@ -36,7 +36,7 @@ Partial Class TambahJenisLocker
         Me.BtnTambahLocker.Location = New System.Drawing.Point(209, 156)
         Me.BtnTambahLocker.Name = "BtnTambahLocker"
         Me.BtnTambahLocker.Size = New System.Drawing.Size(119, 28)
-        Me.BtnTambahLocker.TabIndex = 12
+        Me.BtnTambahLocker.TabIndex = 3
         Me.BtnTambahLocker.Text = "Tambah Locker"
         Me.BtnTambahLocker.UseVisualStyleBackColor = True
         '
@@ -46,7 +46,7 @@ Partial Class TambahJenisLocker
         Me.TxtBiaya.Location = New System.Drawing.Point(116, 106)
         Me.TxtBiaya.Name = "TxtBiaya"
         Me.TxtBiaya.Size = New System.Drawing.Size(212, 24)
-        Me.TxtBiaya.TabIndex = 11
+        Me.TxtBiaya.TabIndex = 2
         '
         'LblBiaya
         '
@@ -71,7 +71,7 @@ Partial Class TambahJenisLocker
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(12, 23)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(211, 26)
@@ -84,7 +84,7 @@ Partial Class TambahJenisLocker
         Me.txtUkuran.Location = New System.Drawing.Point(116, 66)
         Me.txtUkuran.Name = "txtUkuran"
         Me.txtUkuran.Size = New System.Drawing.Size(212, 24)
-        Me.txtUkuran.TabIndex = 18
+        Me.txtUkuran.TabIndex = 1
         '
         'TambahJenisLocker
         '
@@ -97,8 +97,13 @@ Partial Class TambahJenisLocker
         Me.Controls.Add(Me.TxtBiaya)
         Me.Controls.Add(Me.LblBiaya)
         Me.Controls.Add(Me.LblUkuran)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(360, 240)
+        Me.MinimumSize = New System.Drawing.Size(360, 240)
         Me.Name = "TambahJenisLocker"
-        Me.Text = "TambahJenisLocker"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Tambah Jenis Locker"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
