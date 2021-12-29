@@ -129,10 +129,23 @@
     <Compile Include="DataSewa.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ClassJenisLocker.vb" />
     <Compile Include="EditLocker.Designer.vb">
       <DependentUpon>EditLocker.vb</DependentUpon>
     </Compile>
     <Compile Include="EditLocker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HapusJenisLocker.Designer.vb">
+      <DependentUpon>HapusJenisLocker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HapusJenisLocker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JenisLocker.Designer.vb">
+      <DependentUpon>JenisLocker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="JenisLocker.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Locker.vb" />
@@ -165,6 +178,18 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Sewa.vb" />
+    <Compile Include="TambahJenisLocker.Designer.vb">
+      <DependentUpon>TambahJenisLocker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TambahJenisLocker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateJenisLocker.Designer.vb">
+      <DependentUpon>UpdateJenisLocker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateJenisLocker.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UpdateStatusLocker.Designer.vb">
       <DependentUpon>UpdateStatusLocker.vb</DependentUpon>
     </Compile>
@@ -182,6 +207,12 @@
     <EmbeddedResource Include="EditLocker.resx">
       <DependentUpon>EditLocker.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HapusJenisLocker.resx">
+      <DependentUpon>HapusJenisLocker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JenisLocker.resx">
+      <DependentUpon>JenisLocker.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MonitorLocker.resx">
       <DependentUpon>MonitorLocker.vb</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +224,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PengembalianBarang.resx">
       <DependentUpon>PengembalianBarang.vb</DependentUpon>
+    <EmbeddedResource Include="TambahJenisLocker.resx">
+      <DependentUpon>TambahJenisLocker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateJenisLocker.resx">
+      <DependentUpon>UpdateJenisLocker.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateStatusLocker.resx">
       <DependentUpon>UpdateStatusLocker.vb</DependentUpon>

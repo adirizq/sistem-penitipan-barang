@@ -22,8 +22,6 @@ Partial Class EditLocker
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.titleLbl = New System.Windows.Forms.Label()
-        Me.LblLockerIdTitle = New System.Windows.Forms.Label()
         Me.CBUkuran = New System.Windows.Forms.ComboBox()
         Me.LblUkuran = New System.Windows.Forms.Label()
         Me.LblBiaya = New System.Windows.Forms.Label()
@@ -31,32 +29,9 @@ Partial Class EditLocker
         Me.LblLokasi = New System.Windows.Forms.Label()
         Me.TxtLokasi = New System.Windows.Forms.TextBox()
         Me.BtnUpdateLocker = New System.Windows.Forms.Button()
+        Me.titleLbl = New System.Windows.Forms.Label()
+        Me.LblLockerIdTitle = New System.Windows.Forms.Label()
         Me.SuspendLayout()
-        '
-        'titleLbl
-        '
-        Me.titleLbl.AutoSize = True
-        Me.titleLbl.Font = New System.Drawing.Font("Microsoft Tai Le", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.titleLbl.Location = New System.Drawing.Point(20, 20)
-        Me.titleLbl.MaximumSize = New System.Drawing.Size(100, 34)
-        Me.titleLbl.MinimumSize = New System.Drawing.Size(100, 34)
-        Me.titleLbl.Name = "titleLbl"
-        Me.titleLbl.Size = New System.Drawing.Size(100, 34)
-        Me.titleLbl.TabIndex = 0
-        Me.titleLbl.Text = "Locker"
-        '
-        'LblLockerIdTitle
-        '
-        Me.LblLockerIdTitle.AutoSize = True
-        Me.LblLockerIdTitle.Font = New System.Drawing.Font("Microsoft Tai Le", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblLockerIdTitle.Location = New System.Drawing.Point(123, 20)
-        Me.LblLockerIdTitle.Margin = New System.Windows.Forms.Padding(0)
-        Me.LblLockerIdTitle.MaximumSize = New System.Drawing.Size(100, 34)
-        Me.LblLockerIdTitle.MinimumSize = New System.Drawing.Size(100, 34)
-        Me.LblLockerIdTitle.Name = "LblLockerIdTitle"
-        Me.LblLockerIdTitle.Size = New System.Drawing.Size(100, 34)
-        Me.LblLockerIdTitle.TabIndex = 0
-        Me.LblLockerIdTitle.Text = "1"
         '
         'CBUkuran
         '
@@ -126,6 +101,31 @@ Partial Class EditLocker
         Me.BtnUpdateLocker.Text = "Update Locker"
         Me.BtnUpdateLocker.UseVisualStyleBackColor = True
         '
+        'titleLbl
+        '
+        Me.titleLbl.AutoSize = True
+        Me.titleLbl.Font = New System.Drawing.Font("Microsoft Tai Le", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.titleLbl.Location = New System.Drawing.Point(20, 20)
+        Me.titleLbl.MaximumSize = New System.Drawing.Size(100, 34)
+        Me.titleLbl.MinimumSize = New System.Drawing.Size(100, 34)
+        Me.titleLbl.Name = "titleLbl"
+        Me.titleLbl.Size = New System.Drawing.Size(100, 34)
+        Me.titleLbl.TabIndex = 0
+        Me.titleLbl.Text = "Locker"
+        '
+        'LblLockerIdTitle
+        '
+        Me.LblLockerIdTitle.AutoSize = True
+        Me.LblLockerIdTitle.Font = New System.Drawing.Font("Microsoft Tai Le", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblLockerIdTitle.Location = New System.Drawing.Point(123, 20)
+        Me.LblLockerIdTitle.Margin = New System.Windows.Forms.Padding(0)
+        Me.LblLockerIdTitle.MaximumSize = New System.Drawing.Size(100, 34)
+        Me.LblLockerIdTitle.MinimumSize = New System.Drawing.Size(100, 34)
+        Me.LblLockerIdTitle.Name = "LblLockerIdTitle"
+        Me.LblLockerIdTitle.Size = New System.Drawing.Size(100, 34)
+        Me.LblLockerIdTitle.TabIndex = 0
+        Me.LblLockerIdTitle.Text = "1"
+        '
         'EditLocker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -151,9 +151,6 @@ Partial Class EditLocker
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents titleLbl As Label
-    Friend WithEvents LblLockerIdTitle As Label
     Friend WithEvents CBUkuran As ComboBox
     Friend WithEvents LblUkuran As Label
     Friend WithEvents LblBiaya As Label
@@ -161,4 +158,6 @@ Partial Class EditLocker
     Friend WithEvents LblLokasi As Label
     Friend WithEvents TxtLokasi As TextBox
     Friend WithEvents BtnUpdateLocker As Button
+    Friend WithEvents titleLbl As Label
+    Friend WithEvents LblLockerIdTitle As Label
 End Class
