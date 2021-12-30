@@ -1,43 +1,40 @@
-﻿
-Imports System.Security.Cryptography
-    Public Class Login
+﻿Public Class Login
 
+    Public Shared DataSewa As DataSewa
+    Public Shared User As User
 
-        Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Public Sub New()
 
-        End Sub
+        ' This call is required by the designer.
+        InitializeComponent()
 
+        ' Add any initialization after the InitializeComponent() call.
+        DataSewa = New DataSewa()
+        User = New User()
 
-        Private TripleDes As New TripleDESCryptoServiceProvider
+    End Sub
 
-        Public Function EncryptData(ByVal plainText As String)
+    Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
 
-            Dim plaintextbytes() As Byte =
-                System.Text.Encoding.Unicode.GetBytes(plainText)
+        Dim plainUsername As String = TxtUsername.Text
+        Dim plainPassword As String = TxtPassword.Text
 
-            Dim ms As New System.IO.MemoryStream
+        Dim data_user As List(Of String) = User.CheckAuthDatabase(plainUsername, plainPassword)
 
-            Dim encstream As New CryptoStream(ms, TripleDes.CreateEncryptor(), System.Security.Cryptography.CryptoStreamMode.Write)
+        If data_user.Count > 0 Then
+            User.GSUsername = data_user(1)
+            DataSewa.Show()
+            Me.Hide()
+        Else
+            MessageBox.Show("Wrong username or password")
+        End If
 
-            encstream.Write(plaintextbytes, 0, plaintextbytes.Length)
-            encstream.FlushFinalBlock()
+    End Sub
 
-            Return Convert.ToBase64String(ms.ToArray)
+    Private Sub BtnRegister_Click(sender As Object, e As EventArgs) Handles BtnRegister.Click
+        Me.Hide()
+        Dim register = New Register
+        register.Show()
+    End Sub
 
-        End Function
-
-        Private Sub ButtonLogin_Click(sender As Object, e As EventArgs) Handles ButtonLogin.Click
-            Dim PlainUsername As String = TextBoxUserName.Text
-            Dim PlainPassword As String = TextBoxPassword.Text
-
-            Dim AuthStatus As Boolean = Users.CheckAuth(PlainUsername, PlainPassword)
-            If AuthStatus Then
-                Dim Perpustakaan = New Perpustakaan
-                Perpustakaan.Show()
-            Else
-                MessageBox.Show("Wrong Password")
-            End If
-
-
-        End Sub
-    End Class
+End Class
