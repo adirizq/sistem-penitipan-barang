@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class JenisLocker
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class JenisLocker
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.BtnTambah = New System.Windows.Forms.Button()
         Me.BtnHapus = New System.Windows.Forms.Button()
@@ -31,6 +31,7 @@ Partial Class JenisLocker
         Me.DataSewaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MonitorLockerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.JenisLockerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LblUserIdentity = New System.Windows.Forms.Label()
         CType(Me.DataGridViewJenisLocker, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -115,11 +116,23 @@ Partial Class JenisLocker
         Me.JenisLockerToolStripMenuItem.Size = New System.Drawing.Size(82, 20)
         Me.JenisLockerToolStripMenuItem.Text = "Jenis Locker"
         '
+        'LblUserIdentity
+        '
+        Me.LblUserIdentity.AutoSize = True
+        Me.LblUserIdentity.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblUserIdentity.Location = New System.Drawing.Point(580, 58)
+        Me.LblUserIdentity.Name = "LblUserIdentity"
+        Me.LblUserIdentity.Size = New System.Drawing.Size(80, 16)
+        Me.LblUserIdentity.TabIndex = 10
+        Me.LblUserIdentity.Text = "Admin  [ID1]"
+        Me.LblUserIdentity.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'JenisLocker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 416)
+        Me.Controls.Add(Me.LblUserIdentity)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.BtnUpdate)
         Me.Controls.Add(Me.BtnTambah)
@@ -150,4 +163,5 @@ Partial Class JenisLocker
     Friend WithEvents DataSewaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MonitorLockerToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents JenisLockerToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LblUserIdentity As Label
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MonitorLocker
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class MonitorLocker
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.DataGridViewMonitorLocker = New System.Windows.Forms.DataGridView()
         Me.titleLbl = New System.Windows.Forms.Label()
@@ -30,6 +30,7 @@ Partial Class MonitorLocker
         Me.DataSewaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MonitorLockerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.JenisLockerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LblUserIdentity = New System.Windows.Forms.Label()
         CType(Me.DataGridViewMonitorLocker, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -104,11 +105,23 @@ Partial Class MonitorLocker
         Me.JenisLockerToolStripMenuItem.Size = New System.Drawing.Size(82, 20)
         Me.JenisLockerToolStripMenuItem.Text = "Jenis Locker"
         '
+        'LblUserIdentity
+        '
+        Me.LblUserIdentity.AutoSize = True
+        Me.LblUserIdentity.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblUserIdentity.Location = New System.Drawing.Point(580, 53)
+        Me.LblUserIdentity.Name = "LblUserIdentity"
+        Me.LblUserIdentity.Size = New System.Drawing.Size(80, 16)
+        Me.LblUserIdentity.TabIndex = 10
+        Me.LblUserIdentity.Text = "Admin  [ID1]"
+        Me.LblUserIdentity.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'MonitorLocker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 416)
+        Me.Controls.Add(Me.LblUserIdentity)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.BtnUpdateStatus)
         Me.Controls.Add(Me.BtnEditLocker)
@@ -137,4 +150,5 @@ Partial Class MonitorLocker
     Friend WithEvents DataSewaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MonitorLockerToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents JenisLockerToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LblUserIdentity As Label
 End Class

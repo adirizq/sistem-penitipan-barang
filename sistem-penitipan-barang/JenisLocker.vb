@@ -14,6 +14,8 @@
         ClassJenisLocker = DataSewa.ClassJenisLocker
         ReloadDataTableDatabase()
 
+        LblUserIdentity.Text = Login.data_user(1).ToString() + "  [ID: " + Login.data_user(0).ToString() + "]"
+
         If (DataGridViewJenisLocker.Rows.Count > 0) Then
             DataGridViewJenisLocker.Rows(0).Cells(0).Selected = True
             selectedJenisLockerID = DataGridViewJenisLocker.Rows(0).Cells(0).Value
@@ -79,4 +81,5 @@
             DataSewa.Show()
         End If
     End Sub
+
 End Class

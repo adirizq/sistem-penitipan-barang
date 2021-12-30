@@ -34,7 +34,7 @@ Partial Class Login
         'TxtUsername
         '
         Me.TxtUsername.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtUsername.Location = New System.Drawing.Point(32, 99)
+        Me.TxtUsername.Location = New System.Drawing.Point(57, 99)
         Me.TxtUsername.Name = "TxtUsername"
         Me.TxtUsername.Size = New System.Drawing.Size(214, 24)
         Me.TxtUsername.TabIndex = 0
@@ -43,7 +43,7 @@ Partial Class Login
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(29, 80)
+        Me.Label1.Location = New System.Drawing.Point(54, 80)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(67, 16)
         Me.Label1.TabIndex = 1
@@ -53,7 +53,7 @@ Partial Class Login
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(29, 144)
+        Me.Label2.Location = New System.Drawing.Point(54, 144)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(64, 16)
         Me.Label2.TabIndex = 2
@@ -62,7 +62,7 @@ Partial Class Login
         'TxtPassword
         '
         Me.TxtPassword.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtPassword.Location = New System.Drawing.Point(32, 163)
+        Me.TxtPassword.Location = New System.Drawing.Point(57, 163)
         Me.TxtPassword.Name = "TxtPassword"
         Me.TxtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TxtPassword.Size = New System.Drawing.Size(214, 24)
@@ -71,7 +71,7 @@ Partial Class Login
         'BtnLogin
         '
         Me.BtnLogin.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnLogin.Location = New System.Drawing.Point(171, 216)
+        Me.BtnLogin.Location = New System.Drawing.Point(196, 216)
         Me.BtnLogin.Name = "BtnLogin"
         Me.BtnLogin.Size = New System.Drawing.Size(75, 28)
         Me.BtnLogin.TabIndex = 2
@@ -82,7 +82,7 @@ Partial Class Login
         '
         Me.Title.AutoSize = True
         Me.Title.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Title.Location = New System.Drawing.Point(27, 29)
+        Me.Title.Location = New System.Drawing.Point(52, 29)
         Me.Title.Name = "Title"
         Me.Title.Size = New System.Drawing.Size(65, 26)
         Me.Title.TabIndex = 19
@@ -91,7 +91,7 @@ Partial Class Login
         'BtnRegister
         '
         Me.BtnRegister.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRegister.Location = New System.Drawing.Point(85, 216)
+        Me.BtnRegister.Location = New System.Drawing.Point(110, 216)
         Me.BtnRegister.Name = "BtnRegister"
         Me.BtnRegister.Size = New System.Drawing.Size(75, 28)
         Me.BtnRegister.TabIndex = 3
@@ -102,7 +102,7 @@ Partial Class Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(280, 275)
+        Me.ClientSize = New System.Drawing.Size(334, 275)
         Me.Controls.Add(Me.Title)
         Me.Controls.Add(Me.BtnRegister)
         Me.Controls.Add(Me.BtnLogin)
@@ -112,8 +112,8 @@ Partial Class Login
         Me.Controls.Add(Me.TxtUsername)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(296, 314)
-        Me.MinimumSize = New System.Drawing.Size(296, 314)
+        Me.MaximumSize = New System.Drawing.Size(350, 314)
+        Me.MinimumSize = New System.Drawing.Size(350, 314)
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"

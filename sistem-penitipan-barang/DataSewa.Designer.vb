@@ -30,6 +30,8 @@ Partial Class DataSewa
         Me.DataSewaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MonitorLockerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.JenisLockerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnSignOut = New System.Windows.Forms.Button()
+        Me.LblUserIdentity = New System.Windows.Forms.Label()
         CType(Me.DataGridViewDataSewa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -37,7 +39,7 @@ Partial Class DataSewa
         'BtnPengembalian
         '
         Me.BtnPengembalian.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnPengembalian.Location = New System.Drawing.Point(750, 563)
+        Me.BtnPengembalian.Location = New System.Drawing.Point(760, 563)
         Me.BtnPengembalian.Name = "BtnPengembalian"
         Me.BtnPengembalian.Size = New System.Drawing.Size(151, 28)
         Me.BtnPengembalian.TabIndex = 6
@@ -47,7 +49,7 @@ Partial Class DataSewa
         'BtnTambahData
         '
         Me.BtnTambahData.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnTambahData.Location = New System.Drawing.Point(917, 563)
+        Me.BtnTambahData.Location = New System.Drawing.Point(927, 563)
         Me.BtnTambahData.Name = "BtnTambahData"
         Me.BtnTambahData.Size = New System.Drawing.Size(143, 28)
         Me.BtnTambahData.TabIndex = 4
@@ -74,7 +76,7 @@ Partial Class DataSewa
         Me.DataGridViewDataSewa.Name = "DataGridViewDataSewa"
         Me.DataGridViewDataSewa.ReadOnly = True
         Me.DataGridViewDataSewa.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        Me.DataGridViewDataSewa.Size = New System.Drawing.Size(1034, 450)
+        Me.DataGridViewDataSewa.Size = New System.Drawing.Size(1044, 450)
         Me.DataGridViewDataSewa.TabIndex = 3
         '
         'MenuStrip1
@@ -82,7 +84,7 @@ Partial Class DataSewa
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataSewaToolStripMenuItem, Me.MonitorLockerToolStripMenuItem, Me.JenisLockerToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1084, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1094, 24)
         Me.MenuStrip1.TabIndex = 7
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -104,11 +106,34 @@ Partial Class DataSewa
         Me.JenisLockerToolStripMenuItem.Size = New System.Drawing.Size(82, 20)
         Me.JenisLockerToolStripMenuItem.Text = "Jenis Locker"
         '
+        'BtnSignOut
+        '
+        Me.BtnSignOut.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSignOut.Location = New System.Drawing.Point(26, 563)
+        Me.BtnSignOut.Name = "BtnSignOut"
+        Me.BtnSignOut.Size = New System.Drawing.Size(75, 28)
+        Me.BtnSignOut.TabIndex = 8
+        Me.BtnSignOut.Text = "Sign Out"
+        Me.BtnSignOut.UseVisualStyleBackColor = True
+        '
+        'LblUserIdentity
+        '
+        Me.LblUserIdentity.AutoSize = True
+        Me.LblUserIdentity.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblUserIdentity.Location = New System.Drawing.Point(990, 58)
+        Me.LblUserIdentity.Name = "LblUserIdentity"
+        Me.LblUserIdentity.Size = New System.Drawing.Size(80, 16)
+        Me.LblUserIdentity.TabIndex = 9
+        Me.LblUserIdentity.Text = "Admin  [ID1]"
+        Me.LblUserIdentity.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'DataSewa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1084, 616)
+        Me.ClientSize = New System.Drawing.Size(1094, 616)
+        Me.Controls.Add(Me.LblUserIdentity)
+        Me.Controls.Add(Me.BtnSignOut)
         Me.Controls.Add(Me.BtnPengembalian)
         Me.Controls.Add(Me.BtnTambahData)
         Me.Controls.Add(Me.titleLbl)
@@ -117,8 +142,8 @@ Partial Class DataSewa
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(1100, 655)
-        Me.MinimumSize = New System.Drawing.Size(1100, 655)
+        Me.MaximumSize = New System.Drawing.Size(1110, 655)
+        Me.MinimumSize = New System.Drawing.Size(1110, 655)
         Me.Name = "DataSewa"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Data Sewa"
@@ -138,4 +163,6 @@ Partial Class DataSewa
     Friend WithEvents DataSewaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MonitorLockerToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents JenisLockerToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BtnSignOut As Button
+    Friend WithEvents LblUserIdentity As Label
 End Class

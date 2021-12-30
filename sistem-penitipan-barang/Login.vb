@@ -2,6 +2,7 @@
 
     Public Shared DataSewa As DataSewa
     Public Shared User As User
+    Public Shared data_user As List(Of String)
 
     Public Sub New()
 
@@ -9,7 +10,6 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        DataSewa = New DataSewa()
         User = New User()
 
     End Sub
@@ -19,10 +19,11 @@
         Dim plainUsername As String = TxtUsername.Text
         Dim plainPassword As String = TxtPassword.Text
 
-        Dim data_user As List(Of String) = User.CheckAuthDatabase(plainUsername, plainPassword)
+        data_user = User.CheckAuthDatabase(plainUsername, plainPassword)
 
         If data_user.Count > 0 Then
             User.GSUsername = data_user(1)
+            DataSewa = New DataSewa()
             DataSewa.Show()
             Me.Hide()
         Else
@@ -37,4 +38,8 @@
         register.Show()
     End Sub
 
+    Private Sub Login_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        TxtUsername.Text = ""
+        TxtPassword.Text = ""
+    End Sub
 End Class
