@@ -4,6 +4,7 @@
     Public Shared selectedJenisLockerID As Integer
 
     Private toMonitorLocker = False
+    Private dataJenisLocker As DataTable
 
     Public Sub New()
 
@@ -33,7 +34,8 @@
     End Sub
 
     Private Sub ReloadDataTableDatabase()
-        DataGridViewJenisLocker.DataSource = ClassJenisLocker.GetDataJenisUkuranDatabase()
+        dataJenisLocker = ClassJenisLocker.GetDataJenisUkuranDatabase()
+        DataGridViewJenisLocker.DataSource = dataJenisLocker
     End Sub
 
     Private Sub DataGridViewJenisLocker_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewJenisLocker.CellClick
@@ -51,13 +53,21 @@
     End Sub
 
     Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
-        Dim updateJenisLocker = New UpdateJenisLocker
-        updateJenisLocker.Show()
+        If dataJenisLocker.Rows.Count > 0 Then
+            Dim updateJenisLocker = New UpdateJenisLocker
+            updateJenisLocker.Show()
+        Else
+            MessageBox.Show("No data selected")
+        End If
     End Sub
 
     Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles BtnHapus.Click
-        Dim hapusJenisLocker = New HapusJenisLocker
-        hapusJenisLocker.Show()
+        If dataJenisLocker.Rows.Count > 0 Then
+            Dim hapusJenisLocker = New HapusJenisLocker
+            hapusJenisLocker.Show()
+        Else
+            MessageBox.Show("No data selected")
+        End If
     End Sub
 
     Private Sub DataSewaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DataSewaToolStripMenuItem.Click

@@ -19,7 +19,9 @@
         For Each ukuran In jenisUkuran
             CBUkuran.Items.Add(ukuran(1))
         Next
-        CBUkuran.SelectedIndex() = 0
+        If CBUkuran.Items.Count > 0 Then
+            CBUkuran.SelectedIndex() = 0
+        End If
 
         UpdateAvailableLocker()
 
@@ -37,12 +39,14 @@
     End Sub
 
     Private Sub TxtLamaSewa_TextChanged(sender As Object, e As EventArgs) Handles TxtLamaSewa.TextChanged
-        biayaPerjam = DataSewa.Locker.GetJenisUkuranInformationByUkuran(CBUkuran.SelectedItem())(2)
-        If (TxtLamaSewa.TextLength > 0) Then
-            Dim txtBiaya = (biayaPerjam * Integer.Parse(TxtLamaSewa.Text))
-            LblBiayaSewaValue.Text = "Rp." & txtBiaya
-        Else
-            LblBiayaSewaValue.Text = "Rp.0"
+        If CBUkuran.Items.Count > 0 Then
+            biayaPerjam = DataSewa.Locker.GetJenisUkuranInformationByUkuran(CBUkuran.SelectedItem())(2)
+            If (TxtLamaSewa.TextLength > 0) Then
+                Dim txtBiaya = (biayaPerjam * Integer.Parse(TxtLamaSewa.Text))
+                LblBiayaSewaValue.Text = "Rp." & txtBiaya
+            Else
+                LblBiayaSewaValue.Text = "Rp.0"
+            End If
         End If
     End Sub
 
@@ -63,11 +67,13 @@
     End Sub
 
     Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
-        If (validData And TxtLamaSewa.TextLength > 0) Then
-            DataSewa.Sewa.InsertDataSewaDatabase(CBLocker.SelectedItem(), (Integer.Parse(TxtLamaSewa.Text)) * biayaPerjam, Integer.Parse(TxtLamaSewa.Text))
-            Me.Close()
-        Else
-            MessageBox.Show("Harap pilih nomor locker dan isi lama durasi sewa")
+        If CBUkuran.Items.Count > 0 Then
+            If (validData And TxtLamaSewa.TextLength > 0) Then
+                DataSewa.Sewa.InsertDataSewaDatabase(CBLocker.SelectedItem(), (Integer.Parse(TxtLamaSewa.Text)) * biayaPerjam, Integer.Parse(TxtLamaSewa.Text))
+                Me.Close()
+            Else
+                MessageBox.Show("Harap pilih nomor locker dan isi lama durasi sewa")
+            End If
         End If
     End Sub
 

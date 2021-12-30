@@ -143,7 +143,7 @@ Partial Class AddSewa
         Me.LblBiayaSewaValue.Name = "LblBiayaSewaValue"
         Me.LblBiayaSewaValue.Size = New System.Drawing.Size(373, 31)
         Me.LblBiayaSewaValue.TabIndex = 11
-        Me.LblBiayaSewaValue.Text = "Rp.100000"
+        Me.LblBiayaSewaValue.Text = "Rp.0"
         Me.LblBiayaSewaValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'LblWarn

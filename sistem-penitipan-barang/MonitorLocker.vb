@@ -5,6 +5,7 @@
     Public Shared selectedLockerID As Integer
 
     Private toJenisLocker = False
+    Private lockerData As DataTable
 
     Public Sub New()
 
@@ -34,7 +35,8 @@
     End Sub
 
     Private Sub ReloadDataTableDatabase()
-        DataGridViewMonitorLocker.DataSource = Locker.GetDataLockerDatabase()
+        lockerData = Locker.GetDataLockerDatabase()
+        DataGridViewMonitorLocker.DataSource = lockerData
     End Sub
 
     Private Sub DataGridViewMonitorLocker_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewMonitorLocker.CellClick
@@ -47,13 +49,21 @@
     End Sub
 
     Private Sub BtnEditLocker_Click(sender As Object, e As EventArgs) Handles BtnEditLocker.Click
-        Dim editLocker = New EditLocker
-        editLocker.Show()
+        If lockerData.Rows.Count > 0 Then
+            Dim editLocker = New EditLocker
+            editLocker.Show()
+        Else
+            MessageBox.Show("No data selected")
+        End If
     End Sub
 
     Private Sub BtnUpdateStatus_Click(sender As Object, e As EventArgs) Handles BtnUpdateStatus.Click
-        Dim updateStatus = New UpdateStatusLocker
-        updateStatus.Show()
+        If lockerData.Rows.Count > 0 Then
+            Dim updateStatus = New UpdateStatusLocker
+            updateStatus.Show()
+        Else
+            MessageBox.Show("No data selected")
+        End If
     End Sub
 
     Private Sub DataSewaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DataSewaToolStripMenuItem.Click
