@@ -117,6 +117,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.vb">
+      <DependentUpon>Register.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Register.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Sewa.vb" />
     <Compile Include="Locker.vb" />
     <Compile Include="ClassJenisLocker.vb" />
@@ -213,11 +225,17 @@
     <EmbeddedResource Include="JenisLocker.resx">
       <DependentUpon>JenisLocker.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MonitorLocker.resx">
       <DependentUpon>MonitorLocker.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PengembalianBarang.resx">
       <DependentUpon>PengembalianBarang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TambahJenisLocker.resx">
       <DependentUpon>TambahJenisLocker.vb</DependentUpon>
