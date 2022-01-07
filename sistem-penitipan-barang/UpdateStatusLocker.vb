@@ -7,7 +7,7 @@
         ' Add any initialization after the InitializeComponent() call.
         Dim status = MonitorLocker.Locker.GetLockerInformationByID(MonitorLocker.selectedLockerID)(3)
 
-        LblLockerIdTitle.Text = MonitorLocker.selectedLockerID
+        titleLbl.Text = "Locker " & MonitorLocker.selectedLockerNama
 
         If String.Compare(status, "Kosong") = 0 Then
             RDKosong.Checked = True

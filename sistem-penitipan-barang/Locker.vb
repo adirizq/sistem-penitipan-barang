@@ -99,7 +99,7 @@ Public Class Locker
             + "password =" + password + ";" + "database =" + database
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            sqlCommand.CommandText = "SELECT id, id_ukuran, lokasi, status FROM locker
+            sqlCommand.CommandText = "SELECT id, id_ukuran, nama, lokasi, status FROM locker
                                       WHERE id=" & ID
 
             sqlRead = sqlCommand.ExecuteReader
@@ -109,6 +109,7 @@ Public Class Locker
                 result.Add(sqlRead.GetString(1))
                 result.Add(sqlRead.GetString(2))
                 result.Add(sqlRead.GetString(3))
+                result.Add(sqlRead.GetString(4))
             End If
 
             sqlRead.Close()
@@ -121,13 +122,14 @@ Public Class Locker
         End Try
     End Function
 
-    Public Function UpdateLockerDataByID(ID As Integer, IDUkuran As Integer, lokasi As String)
+    Public Function UpdateLockerDataByID(ID As Integer, IDUkuran As Integer, nama As String, lokasi As String)
         Try
             dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
             + "password =" + password + ";" + "database =" + database
             dbConn.Open()
             sqlCommand.Connection = dbConn
             sqlCommand.CommandText = "UPDATE locker SET id_ukuran='" & IDUkuran & "', " &
+                                     "nama='" & nama & "', " &
                                      "lokasi='" & lokasi & "' " &
                                      "WHERE id=" & ID
 

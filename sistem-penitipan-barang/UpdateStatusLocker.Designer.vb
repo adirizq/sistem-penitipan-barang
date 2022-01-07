@@ -22,7 +22,6 @@ Partial Class UpdateStatusLocker
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.LblLockerIdTitle = New System.Windows.Forms.Label()
         Me.titleLbl = New System.Windows.Forms.Label()
         Me.BtnUpdateStatus = New System.Windows.Forms.Button()
         Me.GBStatus = New System.Windows.Forms.GroupBox()
@@ -31,28 +30,14 @@ Partial Class UpdateStatusLocker
         Me.GBStatus.SuspendLayout()
         Me.SuspendLayout()
         '
-        'LblLockerIdTitle
-        '
-        Me.LblLockerIdTitle.AutoSize = True
-        Me.LblLockerIdTitle.Font = New System.Drawing.Font("Microsoft Tai Le", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblLockerIdTitle.Location = New System.Drawing.Point(123, 20)
-        Me.LblLockerIdTitle.Margin = New System.Windows.Forms.Padding(0)
-        Me.LblLockerIdTitle.MaximumSize = New System.Drawing.Size(100, 34)
-        Me.LblLockerIdTitle.MinimumSize = New System.Drawing.Size(100, 34)
-        Me.LblLockerIdTitle.Name = "LblLockerIdTitle"
-        Me.LblLockerIdTitle.Size = New System.Drawing.Size(100, 34)
-        Me.LblLockerIdTitle.TabIndex = 3
-        Me.LblLockerIdTitle.Text = "1"
-        '
         'titleLbl
         '
-        Me.titleLbl.AutoSize = True
         Me.titleLbl.Font = New System.Drawing.Font("Microsoft Tai Le", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.titleLbl.Location = New System.Drawing.Point(20, 20)
-        Me.titleLbl.MaximumSize = New System.Drawing.Size(100, 34)
-        Me.titleLbl.MinimumSize = New System.Drawing.Size(100, 34)
+        Me.titleLbl.MaximumSize = New System.Drawing.Size(210, 34)
+        Me.titleLbl.MinimumSize = New System.Drawing.Size(210, 34)
         Me.titleLbl.Name = "titleLbl"
-        Me.titleLbl.Size = New System.Drawing.Size(100, 34)
+        Me.titleLbl.Size = New System.Drawing.Size(210, 34)
         Me.titleLbl.TabIndex = 4
         Me.titleLbl.Text = "Locker"
         '
@@ -107,7 +92,6 @@ Partial Class UpdateStatusLocker
         Me.ClientSize = New System.Drawing.Size(251, 241)
         Me.Controls.Add(Me.GBStatus)
         Me.Controls.Add(Me.BtnUpdateStatus)
-        Me.Controls.Add(Me.LblLockerIdTitle)
         Me.Controls.Add(Me.titleLbl)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
@@ -119,11 +103,8 @@ Partial Class UpdateStatusLocker
         Me.GBStatus.ResumeLayout(False)
         Me.GBStatus.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents LblLockerIdTitle As Label
     Friend WithEvents titleLbl As Label
     Friend WithEvents BtnUpdateStatus As Button
     Friend WithEvents GBStatus As GroupBox

@@ -1,5 +1,8 @@
 ﻿Public Class EditLocker
 
+    Private dataJenisLocker As DataTable
+    Private selectedIndexUkuran As Integer
+
     Private jenisUkuran
     Private lockerInfo
     Public Sub New()
@@ -8,50 +11,38 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        jenisUkuran = MonitorLocker.ClassJenisLocker.GetJenisUkuranInformation()
+        dataJenisLocker = MonitorLocker.ClassJenisLocker.GetDataJenisUkuranDatabase()
         lockerInfo = MonitorLocker.Locker.GetLockerInformationByID(MonitorLocker.selectedLockerID)
 
-        LblLockerIdTitle.Text = MonitorLocker.selectedLockerID
+        CBUkuran.DataSource = dataJenisLocker
+        CBUkuran.DisplayMember = "Ukuran"
 
-        CBUkuran.Items.Clear()
+        titleLbl.Text = "Locker " & MonitorLocker.selectedLockerNama
+        LblID.Text = MonitorLocker.selectedLockerID
 
-        For Each ukuran In jenisUkuran
-            CBUkuran.Items.Add(ukuran(1))
-            If ukuran(0) = lockerInfo(1) Then
-                CBUkuran.SelectedItem = ukuran(1)
-                LblBiayaValue.Text = "Rp." & ukuran(2) & "/Jam"
-            End If
-        Next
+        selectedIndexUkuran = CBUkuran.SelectedIndex
+        LblBiayaValue.Text = dataJenisLocker.Rows(selectedIndexUkuran)("Biaya")
 
-        TxtLokasi.Text = lockerInfo(2)
+        TxtNama.Text = lockerInfo(2)
+        TxtLokasi.Text = lockerInfo(3)
 
     End Sub
 
     Private Sub CBUkuran_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBUkuran.SelectedIndexChanged
-        Dim selectedItem = CBUkuran.SelectedItem()
-
-        For Each ukuran In jenisUkuran
-            If ukuran(1) = selectedItem Then
-                CBUkuran.SelectedItem = ukuran(1)
-                LblBiayaValue.Text = "Rp." & ukuran(2) & "/Jam"
-            End If
-        Next
+        selectedIndexUkuran = CBUkuran.SelectedIndex
+        LblBiayaValue.Text = dataJenisLocker.Rows(selectedIndexUkuran)("Biaya")
     End Sub
 
     Private Sub BtnUpdateLocker_Click(sender As Object, e As EventArgs) Handles BtnUpdateLocker.Click
-        Dim idUkuranNew As Integer
-        Dim lokasNew = TxtLokasi.Text
+        Dim idUkuranNew = dataJenisLocker.Rows(selectedIndexUkuran)("id")
+        Dim namaNew = TxtNama.Text
+        Dim lokasiNew = TxtLokasi.Text
 
         Dim selectedItem = CBUkuran.SelectedItem()
 
-        For Each ukuran In jenisUkuran
-            If ukuran(1) = selectedItem Then
-                idUkuranNew = ukuran(0)
-            End If
-        Next
-
-        MonitorLocker.Locker.UpdateLockerDataByID(MonitorLocker.selectedLockerID, idUkuranNew, lokasNew)
+        MonitorLocker.Locker.UpdateLockerDataByID(MonitorLocker.selectedLockerID, idUkuranNew, namaNew, lokasiNew)
 
         Me.Close()
     End Sub
+
 End Class

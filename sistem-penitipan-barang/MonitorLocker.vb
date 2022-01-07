@@ -4,6 +4,7 @@
     Public Shared ClassJenisLocker As ClassJenisLocker
 
     Public Shared selectedLockerID As Integer
+    Public Shared selectedLockerNama As String
 
     Private toJenisLocker = False
     Private lockerData As DataTable
@@ -23,6 +24,7 @@
         If (DataGridViewMonitorLocker.Rows.Count > 0) Then
             DataGridViewMonitorLocker.Rows(0).Cells(0).Selected = True
             selectedLockerID = DataGridViewMonitorLocker.Rows(0).Cells(0).Value
+            selectedLockerNama = DataGridViewMonitorLocker.Rows(0).Cells(1).Value
         End If
 
     End Sub
@@ -33,6 +35,7 @@
         If (DataGridViewMonitorLocker.Rows.Count > 0) Then
             DataGridViewMonitorLocker.Rows(0).Cells(0).Selected = True
             selectedLockerID = DataGridViewMonitorLocker.Rows(0).Cells(0).Value
+            selectedLockerNama = DataGridViewMonitorLocker.Rows(0).Cells(1).Value
         End If
     End Sub
 
@@ -47,6 +50,7 @@
         If (index >= 0) Then
             selectedRow = DataGridViewMonitorLocker.Rows(index)
             selectedLockerID = selectedRow.Cells(0).Value
+            selectedLockerNama = selectedRow.Cells(1).Value
         End If
     End Sub
 
