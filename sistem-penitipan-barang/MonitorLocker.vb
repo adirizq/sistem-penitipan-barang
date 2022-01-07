@@ -1,6 +1,7 @@
 ﻿Public Class MonitorLocker
 
     Public Shared Locker As Locker
+    Public Shared ClassJenisLocker As ClassJenisLocker
 
     Public Shared selectedLockerID As Integer
 
@@ -14,6 +15,7 @@
 
         ' Add any initialization after the InitializeComponent() call.
         Locker = DataSewa.Locker
+        ClassJenisLocker = DataSewa.ClassJenisLocker
         ReloadDataTableDatabase()
 
         LblUserIdentity.Text = Login.data_user(1).ToString() + "  [ID: " + Login.data_user(0).ToString() + "]"
@@ -88,4 +90,8 @@
         End If
     End Sub
 
+    Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
+        Dim tambahLocker = New TambahLocker
+        tambahLocker.Show()
+    End Sub
 End Class

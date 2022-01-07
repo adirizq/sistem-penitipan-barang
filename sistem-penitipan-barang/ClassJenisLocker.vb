@@ -165,4 +165,59 @@ Public Class ClassJenisLocker
         'dbConn.Dispose()
         'End Try
     End Function
+    Public Function GetJenisUkuranInformation() As ArrayList
+        Dim result As New ArrayList
+
+        Try
+            dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
+            + "password =" + password + ";" + "database =" + database
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlCommand.CommandText = "SELECT id, ukuran, biaya FROM jenis_ukuran"
+
+            sqlRead = sqlCommand.ExecuteReader
+
+            While sqlRead.Read()
+                result.Add({sqlRead.GetValue(0), sqlRead.GetValue(1), sqlRead.GetValue(2)})
+            End While
+
+            sqlRead.Close()
+            dbConn.Close()
+            Return result
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString())
+        Finally
+            dbConn.Dispose()
+        End Try
+    End Function
+
+    Public Function GetJenisUkuranInformationByUkuran(ukuran As String) As List(Of String)
+        Dim result As New List(Of String)
+
+        Try
+            dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
+            + "password =" + password + ";" + "database =" + database
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlCommand.CommandText = "SELECT id, ukuran, biaya FROM jenis_ukuran
+                                      WHERE ukuran='" & ukuran & "'"
+
+            sqlRead = sqlCommand.ExecuteReader
+
+            If (sqlRead.Read()) Then
+                result.Add(sqlRead.GetValue(0))
+                result.Add(sqlRead.GetValue(1))
+                result.Add(sqlRead.GetValue(2))
+            End If
+
+            sqlRead.Close()
+            dbConn.Close()
+            Return result
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString())
+        Finally
+            dbConn.Dispose()
+        End Try
+    End Function
+
 End Class

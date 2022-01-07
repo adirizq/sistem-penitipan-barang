@@ -61,4 +61,9 @@ Public Class Register
             Return False
         End If
     End Function
+
+    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
+        Login.Show()
+        Me.Close()
+    End Sub
 End Class

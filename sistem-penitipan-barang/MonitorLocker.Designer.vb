@@ -31,6 +31,8 @@ Partial Class MonitorLocker
         Me.MonitorLockerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.JenisLockerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LblUserIdentity = New System.Windows.Forms.Label()
+        Me.BtnTambah = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.DataGridViewMonitorLocker, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -116,11 +118,33 @@ Partial Class MonitorLocker
         Me.LblUserIdentity.Text = "Admin  [ID1]"
         Me.LblUserIdentity.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
+        'BtnTambah
+        '
+        Me.BtnTambah.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnTambah.Location = New System.Drawing.Point(341, 363)
+        Me.BtnTambah.Name = "BtnTambah"
+        Me.BtnTambah.Size = New System.Drawing.Size(108, 28)
+        Me.BtnTambah.TabIndex = 11
+        Me.BtnTambah.Text = "Tambah Locker"
+        Me.BtnTambah.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(227, 363)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(98, 28)
+        Me.Button2.TabIndex = 12
+        Me.Button2.Text = "Update Status"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'MonitorLocker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 416)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.BtnTambah)
         Me.Controls.Add(Me.LblUserIdentity)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.BtnUpdateStatus)
@@ -151,4 +175,6 @@ Partial Class MonitorLocker
     Friend WithEvents MonitorLockerToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents JenisLockerToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LblUserIdentity As Label
+    Friend WithEvents BtnTambah As Button
+    Friend WithEvents Button2 As Button
 End Class

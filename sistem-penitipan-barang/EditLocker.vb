@@ -8,7 +8,7 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        jenisUkuran = MonitorLocker.Locker.GetJenisUkuranInformation()
+        jenisUkuran = MonitorLocker.ClassJenisLocker.GetJenisUkuranInformation()
         lockerInfo = MonitorLocker.Locker.GetLockerInformationByID(MonitorLocker.selectedLockerID)
 
         LblLockerIdTitle.Text = MonitorLocker.selectedLockerID

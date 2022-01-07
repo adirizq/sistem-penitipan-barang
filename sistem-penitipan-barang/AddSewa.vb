@@ -14,7 +14,7 @@
         ' Add any initialization after the InitializeComponent() call.
         validData = True
 
-        jenisUkuran = DataSewa.Locker.GetJenisUkuranInformation()
+        jenisUkuran = DataSewa.ClassJenisLocker.GetJenisUkuranInformation()
         CBUkuran.Items.Clear()
         For Each ukuran In jenisUkuran
             CBUkuran.Items.Add(ukuran(1))
@@ -29,7 +29,7 @@
 
     Private Sub CBUkuran_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBUkuran.SelectedIndexChanged
         UpdateAvailableLocker()
-        biayaPerjam = DataSewa.Locker.GetJenisUkuranInformationByUkuran(CBUkuran.SelectedItem())(2)
+        biayaPerjam = DataSewa.ClassJenisLocker.GetJenisUkuranInformationByUkuran(CBUkuran.SelectedItem())(2)
         If (TxtLamaSewa.TextLength > 0) Then
             Dim txtBiaya = (biayaPerjam * Integer.Parse(TxtLamaSewa.Text))
             LblBiayaSewaValue.Text = "Rp." & txtBiaya
@@ -40,7 +40,7 @@
 
     Private Sub TxtLamaSewa_TextChanged(sender As Object, e As EventArgs) Handles TxtLamaSewa.TextChanged
         If CBUkuran.Items.Count > 0 Then
-            biayaPerjam = DataSewa.Locker.GetJenisUkuranInformationByUkuran(CBUkuran.SelectedItem())(2)
+            biayaPerjam = DataSewa.ClassJenisLocker.GetJenisUkuranInformationByUkuran(CBUkuran.SelectedItem())(2)
             If (TxtLamaSewa.TextLength > 0) Then
                 Dim txtBiaya = (biayaPerjam * Integer.Parse(TxtLamaSewa.Text))
                 LblBiayaSewaValue.Text = "Rp." & txtBiaya

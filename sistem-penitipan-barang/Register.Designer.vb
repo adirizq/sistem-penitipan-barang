@@ -34,12 +34,13 @@ Partial Class Register
         Me.TxtRetypePassword = New System.Windows.Forms.TextBox()
         Me.LblNotValid = New System.Windows.Forms.Label()
         Me.LblNotMatch = New System.Windows.Forms.Label()
+        Me.BtnCancel = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'BtnRegister
         '
         Me.BtnRegister.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRegister.Location = New System.Drawing.Point(196, 394)
+        Me.BtnRegister.Location = New System.Drawing.Point(196, 408)
         Me.BtnRegister.Name = "BtnRegister"
         Me.BtnRegister.Size = New System.Drawing.Size(75, 28)
         Me.BtnRegister.TabIndex = 5
@@ -49,7 +50,7 @@ Partial Class Register
         'TxtEmail
         '
         Me.TxtEmail.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtEmail.Location = New System.Drawing.Point(57, 162)
+        Me.TxtEmail.Location = New System.Drawing.Point(57, 176)
         Me.TxtEmail.Name = "TxtEmail"
         Me.TxtEmail.Size = New System.Drawing.Size(214, 24)
         Me.TxtEmail.TabIndex = 2
@@ -58,7 +59,7 @@ Partial Class Register
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(54, 143)
+        Me.Label2.Location = New System.Drawing.Point(54, 157)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(39, 16)
         Me.Label2.TabIndex = 7
@@ -68,7 +69,7 @@ Partial Class Register
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(54, 80)
+        Me.Label1.Location = New System.Drawing.Point(54, 94)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(67, 16)
         Me.Label1.TabIndex = 6
@@ -77,7 +78,7 @@ Partial Class Register
         'TxtUsername
         '
         Me.TxtUsername.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtUsername.Location = New System.Drawing.Point(57, 99)
+        Me.TxtUsername.Location = New System.Drawing.Point(57, 113)
         Me.TxtUsername.Name = "TxtUsername"
         Me.TxtUsername.Size = New System.Drawing.Size(214, 24)
         Me.TxtUsername.TabIndex = 1
@@ -86,7 +87,7 @@ Partial Class Register
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(52, 28)
+        Me.Label3.Location = New System.Drawing.Point(52, 42)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(158, 26)
         Me.Label3.TabIndex = 18
@@ -95,7 +96,7 @@ Partial Class Register
         'TxtPassword
         '
         Me.TxtPassword.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtPassword.Location = New System.Drawing.Point(57, 225)
+        Me.TxtPassword.Location = New System.Drawing.Point(57, 239)
         Me.TxtPassword.Name = "TxtPassword"
         Me.TxtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TxtPassword.Size = New System.Drawing.Size(214, 24)
@@ -105,7 +106,7 @@ Partial Class Register
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(54, 206)
+        Me.Label4.Location = New System.Drawing.Point(54, 220)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(64, 16)
         Me.Label4.TabIndex = 6
@@ -115,7 +116,7 @@ Partial Class Register
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(54, 269)
+        Me.Label5.Location = New System.Drawing.Point(54, 283)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(108, 16)
         Me.Label5.TabIndex = 7
@@ -124,7 +125,7 @@ Partial Class Register
         'TxtRetypePassword
         '
         Me.TxtRetypePassword.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtRetypePassword.Location = New System.Drawing.Point(57, 288)
+        Me.TxtRetypePassword.Location = New System.Drawing.Point(57, 302)
         Me.TxtRetypePassword.Name = "TxtRetypePassword"
         Me.TxtRetypePassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TxtRetypePassword.Size = New System.Drawing.Size(214, 24)
@@ -135,7 +136,7 @@ Partial Class Register
         Me.LblNotValid.AutoSize = True
         Me.LblNotValid.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblNotValid.ForeColor = System.Drawing.Color.Firebrick
-        Me.LblNotValid.Location = New System.Drawing.Point(54, 338)
+        Me.LblNotValid.Location = New System.Drawing.Point(54, 352)
         Me.LblNotValid.Name = "LblNotValid"
         Me.LblNotValid.Size = New System.Drawing.Size(102, 16)
         Me.LblNotValid.TabIndex = 19
@@ -146,17 +147,28 @@ Partial Class Register
         Me.LblNotMatch.AutoSize = True
         Me.LblNotMatch.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblNotMatch.ForeColor = System.Drawing.Color.Firebrick
-        Me.LblNotMatch.Location = New System.Drawing.Point(54, 354)
+        Me.LblNotMatch.Location = New System.Drawing.Point(54, 368)
         Me.LblNotMatch.Name = "LblNotMatch"
         Me.LblNotMatch.Size = New System.Drawing.Size(159, 16)
         Me.LblNotMatch.TabIndex = 19
         Me.LblNotMatch.Text = "*Password doesn't match!"
         '
+        'BtnCancel
+        '
+        Me.BtnCancel.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancel.Location = New System.Drawing.Point(115, 408)
+        Me.BtnCancel.Name = "BtnCancel"
+        Me.BtnCancel.Size = New System.Drawing.Size(75, 28)
+        Me.BtnCancel.TabIndex = 20
+        Me.BtnCancel.Text = "Cancel"
+        Me.BtnCancel.UseVisualStyleBackColor = True
+        '
         'Register
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(334, 453)
+        Me.ClientSize = New System.Drawing.Size(334, 485)
+        Me.Controls.Add(Me.BtnCancel)
         Me.Controls.Add(Me.LblNotMatch)
         Me.Controls.Add(Me.LblNotValid)
         Me.Controls.Add(Me.Label3)
@@ -171,8 +183,8 @@ Partial Class Register
         Me.Controls.Add(Me.TxtUsername)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(350, 492)
-        Me.MinimumSize = New System.Drawing.Size(350, 492)
+        Me.MaximumSize = New System.Drawing.Size(350, 524)
+        Me.MinimumSize = New System.Drawing.Size(350, 524)
         Me.Name = "Register"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Register"
@@ -193,4 +205,5 @@ Partial Class Register
     Friend WithEvents TxtRetypePassword As TextBox
     Friend WithEvents LblNotValid As Label
     Friend WithEvents LblNotMatch As Label
+    Friend WithEvents BtnCancel As Button
 End Class
