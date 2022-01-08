@@ -43,24 +43,21 @@ Public Class Locker
         End Try
     End Function
 
-    Public Function GetDataAvailableLockerByUkuran(ukuran As String) As List(Of Integer)
-        Dim result As New List(Of Integer)
+    Public Function GetDataAvailableLockerByUkuranID(ID As Integer) As DataTable
+        Dim result As New DataTable
 
         Try
             dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
             + "password =" + password + ";" + "database =" + database
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            sqlCommand.CommandText = "SELECT l.id FROM locker l JOIN jenis_ukuran u
+            sqlCommand.CommandText = "SELECT l.id AS 'ID', l.nama AS 'Nama' FROM locker l JOIN jenis_ukuran u
                                       ON l.id_ukuran = u.id 
-                                      WHERE l.status = 'Kosong' AND u.ukuran = '" & ukuran & "'"
+                                      WHERE l.status = 'Kosong' AND u.id = '" & ID & "'"
 
             sqlRead = sqlCommand.ExecuteReader
 
-            While sqlRead.Read()
-                result.Add(sqlRead.GetValue(0))
-            End While
-
+            result.Load(sqlRead)
             sqlRead.Close()
             dbConn.Close()
             Return result
@@ -159,6 +156,28 @@ Public Class Locker
             dbConn.Close()
 
             MessageBox.Show("Berhasil Menambahkan Data Locker")
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString())
+        Finally
+            dbConn.Dispose()
+        End Try
+    End Function
+
+    Public Function DeleteDataLocker(id As Integer)
+        Try
+            dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
+            + "password =" + password + ";" + "database =" + database
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlCommand.CommandText = "DELETE FROM locker " &
+                                        "WHERE id='" & id & "'"
+
+            sqlRead = sqlCommand.ExecuteReader
+
+            sqlRead.Close()
+            dbConn.Close()
+
+            MessageBox.Show("Berhasil Menghapus Data Locker")
         Catch ex As Exception
             MessageBox.Show(ex.ToString())
         Finally

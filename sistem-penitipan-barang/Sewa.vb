@@ -21,15 +21,15 @@ Public Class Sewa
             dbConn.Open()
             sqlCommand.Connection = dbConn
             sqlCommand.CommandText = "SELECT
-                                        id AS 'No Sewa',
-                                        id_locker AS 'No Locker',
-                                        tanggal_sewa AS 'Tanggal Sewa',
-                                        tanggal_kembali AS 'Tanggal Pengembalian',
-                                        bayar_sebelum_pinjam AS 'Tagihan Normal',
-                                        rencana_pinjam AS 'Durasi Peminjaman',
-                                        kelebihan_pinjam AS 'Denda',
-                                        total_bayar AS 'Total Tagihan'
-                                        FROM penyewaan"
+                                        p.id AS 'No Sewa',
+                                        l.nama AS 'Nama Locker',
+                                        p.tanggal_sewa AS 'Tanggal Sewa',
+                                        p.tanggal_kembali AS 'Tanggal Pengembalian',
+                                        p.bayar_sebelum_pinjam AS 'Tagihan Normal',
+                                        p.rencana_pinjam AS 'Durasi Peminjaman',
+                                        p.kelebihan_pinjam AS 'Denda',
+                                        p.total_bayar AS 'Total Tagihan'
+                                        FROM penyewaan p JOIN locker l ON p.id_locker = l.id"
 
             sqlRead = sqlCommand.ExecuteReader
 
@@ -206,16 +206,16 @@ Public Class Sewa
             + "password =" + password + ";" + "database =" + database
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            sqlCommand.CommandText = "UPDATE penyewaan SET " &
-                                        "tanggal_kembali = '" & DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") & "' " &
-                                        "WHERE id = " & ID
+            sqlCommand.CommandText = "update penyewaan set " &
+                                        "tanggal_kembali = '" & DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") & "' " &
+                                        "where id = " & ID
 
-            DataSewa.Locker.UpdateLockerStatusByID(IdLocker, "Kosong")
+            DataSewa.Locker.UpdateLockerStatusByID(IdLocker, "kosong")
 
             sqlRead = sqlCommand.ExecuteReader
             sqlRead.Close()
             dbConn.Close()
-            MessageBox.Show("Pengembalian barang berhasil")
+            MessageBox.Show("pengembalian barang berhasil")
         Catch ex As Exception
             MessageBox.Show(ex.ToString())
         Finally

@@ -117,6 +117,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HapusLocker.Designer.vb">
+      <DependentUpon>HapusLocker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HapusLocker.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
@@ -228,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HapusJenisLocker.resx">
       <DependentUpon>HapusJenisLocker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HapusLocker.resx">
+      <DependentUpon>HapusLocker.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JenisLocker.resx">
       <DependentUpon>JenisLocker.vb</DependentUpon>

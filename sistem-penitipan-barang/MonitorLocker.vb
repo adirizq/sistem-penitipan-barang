@@ -98,4 +98,9 @@
         Dim tambahLocker = New TambahLocker
         tambahLocker.Show()
     End Sub
+
+    Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles BtnHapus.Click
+        Dim hapusLocker = New HapusLocker
+        hapusLocker.Show()
+    End Sub
 End Class

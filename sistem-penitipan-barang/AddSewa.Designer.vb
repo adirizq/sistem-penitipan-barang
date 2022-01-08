@@ -103,9 +103,9 @@ Partial Class AddSewa
         Me.LblLocker.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblLocker.Location = New System.Drawing.Point(23, 138)
         Me.LblLocker.Name = "LblLocker"
-        Me.LblLocker.Size = New System.Drawing.Size(68, 16)
+        Me.LblLocker.Size = New System.Drawing.Size(85, 16)
         Me.LblLocker.TabIndex = 13
-        Me.LblLocker.Text = "No Locker"
+        Me.LblLocker.Text = "Nama Locker"
         '
         'Lbl1
         '
