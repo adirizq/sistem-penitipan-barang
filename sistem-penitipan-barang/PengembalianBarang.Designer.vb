@@ -28,7 +28,7 @@ Partial Class PengembalianBarang
         Me.LblSewa = New System.Windows.Forms.Label()
         Me.LblNoSewaValue = New System.Windows.Forms.Label()
         Me.LblLocker = New System.Windows.Forms.Label()
-        Me.LblNoLockerValue = New System.Windows.Forms.Label()
+        Me.LblNamaLockerValue = New System.Windows.Forms.Label()
         Me.LblKeterlambatan = New System.Windows.Forms.Label()
         Me.LblKeterlambatanValue = New System.Windows.Forms.Label()
         Me.btnKonfirmasi = New System.Windows.Forms.Button()
@@ -111,21 +111,21 @@ Partial Class PengembalianBarang
         Me.LblLocker.Name = "LblLocker"
         Me.LblLocker.Size = New System.Drawing.Size(373, 16)
         Me.LblLocker.TabIndex = 18
-        Me.LblLocker.Text = "No Locker :"
+        Me.LblLocker.Text = "Nama Locker :"
         Me.LblLocker.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'LblNoLockerValue
+        'LblNamaLockerValue
         '
-        Me.LblNoLockerValue.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LblNoLockerValue.Font = New System.Drawing.Font("Microsoft Tai Le", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblNoLockerValue.Location = New System.Drawing.Point(0, 173)
-        Me.LblNoLockerValue.MaximumSize = New System.Drawing.Size(373, 21)
-        Me.LblNoLockerValue.MinimumSize = New System.Drawing.Size(373, 21)
-        Me.LblNoLockerValue.Name = "LblNoLockerValue"
-        Me.LblNoLockerValue.Size = New System.Drawing.Size(373, 21)
-        Me.LblNoLockerValue.TabIndex = 18
-        Me.LblNoLockerValue.Text = "1"
-        Me.LblNoLockerValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LblNamaLockerValue.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblNamaLockerValue.Font = New System.Drawing.Font("Microsoft Tai Le", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNamaLockerValue.Location = New System.Drawing.Point(0, 173)
+        Me.LblNamaLockerValue.MaximumSize = New System.Drawing.Size(373, 21)
+        Me.LblNamaLockerValue.MinimumSize = New System.Drawing.Size(373, 21)
+        Me.LblNamaLockerValue.Name = "LblNamaLockerValue"
+        Me.LblNamaLockerValue.Size = New System.Drawing.Size(373, 21)
+        Me.LblNamaLockerValue.TabIndex = 18
+        Me.LblNamaLockerValue.Text = "1"
+        Me.LblNamaLockerValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'LblKeterlambatan
         '
@@ -174,7 +174,7 @@ Partial Class PengembalianBarang
         Me.Controls.Add(Me.btnKonfirmasi)
         Me.Controls.Add(Me.LblKeterlambatanValue)
         Me.Controls.Add(Me.LblKeterlambatan)
-        Me.Controls.Add(Me.LblNoLockerValue)
+        Me.Controls.Add(Me.LblNamaLockerValue)
         Me.Controls.Add(Me.LblLocker)
         Me.Controls.Add(Me.LblNoSewaValue)
         Me.Controls.Add(Me.LblSewa)
@@ -197,7 +197,7 @@ Partial Class PengembalianBarang
     Friend WithEvents LblSewa As Label
     Friend WithEvents LblNoSewaValue As Label
     Friend WithEvents LblLocker As Label
-    Friend WithEvents LblNoLockerValue As Label
+    Friend WithEvents LblNamaLockerValue As Label
     Friend WithEvents LblKeterlambatan As Label
     Friend WithEvents LblKeterlambatanValue As Label
     Friend WithEvents btnKonfirmasi As Button

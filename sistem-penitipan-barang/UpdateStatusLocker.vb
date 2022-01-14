@@ -5,9 +5,9 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        Dim status = MonitorLocker.Locker.GetLockerInformationByID(MonitorLocker.selectedLockerID)(3)
+        titleLbl.Text = "Locker " & MonitorLocker.Locker.NamaLockerProperty
 
-        titleLbl.Text = "Locker " & MonitorLocker.selectedLockerNama
+        Dim status = MonitorLocker.Locker.StatusProperty
 
         If String.Compare(status, "Kosong") = 0 Then
             RDKosong.Checked = True
@@ -18,9 +18,9 @@
 
     Private Sub BtnUpdateStatus_Click(sender As Object, e As EventArgs) Handles BtnUpdateStatus.Click
         If RDKosong.Checked = True Then
-            MonitorLocker.Locker.UpdateLockerStatusByID(MonitorLocker.selectedLockerID, "Kosong")
+            MonitorLocker.Locker.UpdateLockerStatusByID(MonitorLocker.Locker.IDLockerProperty, "Kosong")
         ElseIf RDTerisi.Checked = True Then
-            MonitorLocker.Locker.UpdateLockerStatusByID(MonitorLocker.selectedLockerID, "Terisi")
+            MonitorLocker.Locker.UpdateLockerStatusByID(MonitorLocker.Locker.IDLockerProperty, "Terisi")
         End If
 
         Me.Close()

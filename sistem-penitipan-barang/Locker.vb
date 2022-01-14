@@ -12,6 +12,47 @@ Public Class Locker
     Private password As String = ""
     Private database As String = "sistem_penitipan_barang"
 
+    Private idLocker As Integer
+    Private namaLocker As String
+    Private lokasiLocker As String
+    Private statusLocker As String
+
+    Public Property IDLockerProperty() As Integer
+        Get
+            Return idLocker
+        End Get
+        Set(ByVal value As Integer)
+            idLocker = value
+        End Set
+    End Property
+
+    Public Property NamaLockerProperty() As String
+        Get
+            Return namaLocker
+        End Get
+        Set(ByVal value As String)
+            namaLocker = value
+        End Set
+    End Property
+
+    Public Property LokasiProperty() As String
+        Get
+            Return lokasiLocker
+        End Get
+        Set(ByVal value As String)
+            lokasiLocker = value
+        End Set
+    End Property
+
+    Public Property StatusProperty() As String
+        Get
+            Return statusLocker
+        End Get
+        Set(ByVal value As String)
+            statusLocker = value
+        End Set
+    End Property
+
     Public Function GetDataLockerDatabase() As DataTable
         Dim result As New DataTable
 

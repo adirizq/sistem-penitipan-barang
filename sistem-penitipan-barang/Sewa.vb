@@ -11,6 +11,77 @@ Public Class Sewa
     Private password As String = ""
     Private database As String = "sistem_penitipan_barang"
 
+    Private idSewa As Integer
+    Private tglSewa As Date
+    Private tglKembali As Date
+    Private tagihanAwal As Integer
+    Private lamaPinjam As Integer
+    Private denda As Integer
+    Private totalTagihan As Integer
+
+    Public Property IDSewaProperty() As Integer
+        Get
+            Return idSewa
+        End Get
+        Set(ByVal value As Integer)
+            idSewa = value
+        End Set
+    End Property
+
+    Public Property TglSewaProperty() As Date
+        Get
+            Return tglSewa
+        End Get
+        Set(ByVal value As Date)
+            tglSewa = value
+        End Set
+    End Property
+
+    Public Property TglKembaliProperty() As Date
+        Get
+            Return tglKembali
+        End Get
+        Set(ByVal value As Date)
+            tglKembali = value
+        End Set
+    End Property
+
+    Public Property TagihanAwalProperty() As Integer
+        Get
+            Return tagihanAwal
+        End Get
+        Set(ByVal value As Integer)
+            tagihanAwal = value
+        End Set
+    End Property
+
+    Public Property LamaPinjamProperty() As Integer
+        Get
+            Return lamaPinjam
+        End Get
+        Set(ByVal value As Integer)
+            lamaPinjam = value
+        End Set
+    End Property
+
+    Public Property DendaProperty() As Integer
+        Get
+            Return denda
+        End Get
+        Set(ByVal value As Integer)
+            denda = value
+        End Set
+    End Property
+
+    Public Property TotalTagihanProperty() As Integer
+        Get
+            Return totalTagihan
+        End Get
+        Set(ByVal value As Integer)
+            totalTagihan = value
+        End Set
+    End Property
+
     Public Function GetDataSewaDatabase() As DataTable
         Dim result As New DataTable
         Dim data As New DataTable
@@ -58,7 +129,7 @@ Public Class Sewa
                     Dim denda = 0
                     Dim totalTagihan = tagihanNormal + denda
 
-                    If totalDurasiJam > row(5) Then
+                    If totalDurasiJam > durasiPeminjaman Then
                         Dim hargaPerjam = tagihanNormal / durasiPeminjaman
 
                         denda = (totalDurasiJam - durasiPeminjaman) * (hargaPerjam + 2000)
@@ -75,25 +146,15 @@ Public Class Sewa
                     row(5) = durasiPeminjaman.ToString() + " Jam"
                     row(7) = "Rp." + (Integer.Parse(totalTagihan)).ToString("#,#")
                 Else
-                    Dim waktuPenyewaan As Date = row(2)
-                    Dim waktuPengembalian As Date = row(3)
-                    Dim durasiTs As TimeSpan = waktuPengembalian - waktuPenyewaan
-                    Dim totalDurasiJam As Integer = Math.Ceiling(Convert.ToInt32(durasiTs.TotalMinutes) / 60)
-
                     Dim tagihanNormal = row(4)
                     Dim durasiPeminjaman = row(5)
-                    Dim denda = 0
-                    Dim totalTagihan = tagihanNormal + denda
+                    Dim denda = row(6)
+                    Dim totalTagihan = row(7)
 
-                    If totalDurasiJam > row(5) Then
-                        Dim hargaPerjam = tagihanNormal / durasiPeminjaman
-
-                        denda = (totalDurasiJam - durasiPeminjaman) * (hargaPerjam + 2000)
-                        totalTagihan = tagihanNormal + denda
-
-                        row(6) = "Rp." + (Integer.Parse(denda)).ToString("#,#")
-                    Else
+                    If denda = 0 Then
                         row(6) = "Rp.0"
+                    Else
+                        row(6) = "Rp." + (Integer.Parse(denda)).ToString("#,#")
                     End If
 
                     row(4) = "Rp." + (Integer.Parse(tagihanNormal)).ToString("#,#")
@@ -110,39 +171,23 @@ Public Class Sewa
         End Try
     End Function
 
-    Public Function GetDataSewaByID(ID As Integer) As List(Of String)
-        Dim result As New List(Of String)
+    Public Function GetIdLockerByIDSewa(ID As Integer) As Integer
+        Dim result As Integer
 
         Try
             dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
             + "password =" + password + ";" + "database =" + database
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            sqlCommand.CommandText = "SELECT id, id_locker, tanggal_sewa, tanggal_kembali,
-                                      bayar_sebelum_pinjam, rencana_pinjam, kelebihan_pinjam, total_bayar 
-                                      FROM penyewaan WHERE id=" & ID
+            sqlCommand.CommandText = "SELECT id_locker FROM penyewaan WHERE id=" & ID
 
             sqlRead = sqlCommand.ExecuteReader
 
             If (sqlRead.Read()) Then
-                result.Add(sqlRead.GetValue(0))
-                result.Add(sqlRead.GetValue(1))
-                result.Add(sqlRead.GetValue(2))
-
-                If IsDBNull(sqlRead.GetValue(3)) Then
-                    result.Add("")
-                Else
-                    result.Add(sqlRead.GetValue(3))
-                End If
-
-                result.Add(sqlRead.GetValue(4))
-                result.Add(sqlRead.GetValue(5))
-                result.Add(sqlRead.GetValue(6))
-                result.Add(sqlRead.GetValue(7))
-
+                result = sqlRead.GetValue(0)
             End If
 
-                sqlRead.Close()
+            sqlRead.Close()
             dbConn.Close()
             Return result
         Catch ex As Exception
@@ -200,7 +245,7 @@ Public Class Sewa
         End Try
     End Function
 
-    Public Function UpdatePengembalianSewaByID(ID As Integer, IdLocker As Integer)
+    Public Function UpdatePengembalianSewaByID(ID As Integer, IDLocker As Integer)
         Try
             dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
             + "password =" + password + ";" + "database =" + database
@@ -210,7 +255,7 @@ Public Class Sewa
                                         "tanggal_kembali = '" & DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") & "' " &
                                         "where id = " & ID
 
-            DataSewa.Locker.UpdateLockerStatusByID(IdLocker, "kosong")
+            DataSewa.Locker.UpdateLockerStatusByID(IDLocker, "kosong")
 
             sqlRead = sqlCommand.ExecuteReader
             sqlRead.Close()

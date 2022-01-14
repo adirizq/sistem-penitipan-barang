@@ -4,7 +4,7 @@
     Public Shared Locker As Locker
     Public Shared ClassJenisLocker As ClassJenisLocker
 
-    Public Shared selectedSewaID As Integer
+    Private selectedRow As DataGridViewRow
     Private dataSewaDt As DataTable
     Private signOut = False
 
@@ -23,7 +23,7 @@
         ReloadDataTableDatabase()
 
         If (DataGridViewDataSewa.Rows.Count > 0) Then
-            selectedSewaID = DataGridViewDataSewa.Rows(0).Cells(0).Value
+            DataGridViewDataSewa.CurrentCell = DataGridViewDataSewa.Rows(0).Cells(0)
         End If
 
     End Sub
@@ -40,7 +40,6 @@
 
         If (DataGridViewDataSewa.Rows.Count > 0) Then
             DataGridViewDataSewa.CurrentCell = DataGridViewDataSewa.Rows(0).Cells(0)
-            selectedSewaID = DataGridViewDataSewa.Rows(0).Cells(0).Value
         End If
 
         signOut = False
@@ -69,13 +68,17 @@
 
     Private Sub BtnPengembalian_Click(sender As Object, e As EventArgs) Handles BtnPengembalian.Click
         If dataSewaDt.Rows.Count > 0 Then
-            If DataSewa.Sewa.GetDataSewaByID(DataSewa.selectedSewaID)(3) = "" Then
-                Debug.WriteLine("Kosong")
+            If IsDBNull(selectedRow.Cells(3).Value) Then
+                Sewa.IDSewaProperty = selectedRow.Cells(0).Value
+                Locker.NamaLockerProperty = selectedRow.Cells(1).Value
+                Sewa.TglSewaProperty = selectedRow.Cells(2).Value
+                Sewa.LamaPinjamProperty = getNumeric(selectedRow.Cells(5).Value)
+                Sewa.DendaProperty = getNumeric(selectedRow.Cells(6).Value)
+
                 Dim pengembalianBarang = New PengembalianBarang
                 pengembalianBarang.Show()
             Else
                 MessageBox.Show("Barang sudah dikembalikan ke pemilik barang")
-                Debug.WriteLine(DataSewa.Sewa.GetDataSewaByID(DataSewa.selectedSewaID)(3))
             End If
         Else
             MessageBox.Show("No data selected")
@@ -84,10 +87,8 @@
 
     Private Sub DataGridViewDataSewa_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewDataSewa.CellClick
         Dim index As Integer = e.RowIndex
-        Dim selectedRow As DataGridViewRow
         If (index >= 0) Then
             selectedRow = DataGridViewDataSewa.Rows(index)
-            selectedSewaID = selectedRow.Cells(0).Value
         End If
     End Sub
 
@@ -105,4 +106,14 @@
             Login.Close()
         End If
     End Sub
+
+    Public Function getNumeric(value As String) As Integer
+        Dim output As New System.Text.StringBuilder
+        For i = 0 To value.Length - 1
+            If IsNumeric(value(i)) Then
+                output.Append(value(i))
+            End If
+        Next
+        Return Integer.Parse(output.ToString())
+    End Function
 End Class

@@ -1,5 +1,4 @@
 ﻿Public Class AddSewa
-    Private validData
     Private biayaPerjam As Integer
     Private availabeLocker As DataTable
     Private dataJenisLocker As DataTable
@@ -11,14 +10,12 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        validData = True
-
         dataJenisLocker = DataSewa.ClassJenisLocker.GetDataJenisUkuranDatabase()
         CBUkuran.DataSource = dataJenisLocker
         CBUkuran.DisplayMember = "Ukuran"
 
         selectedIndexUkuran = CBUkuran.SelectedIndex
-        biayaPerjam = GetIntegerValue(dataJenisLocker.Rows(selectedIndexUkuran)("Biaya").ToString())
+        biayaPerjam = DataSewa.getNumeric(dataJenisLocker.Rows(selectedIndexUkuran)("Biaya").ToString())
 
         UpdateAvailableLocker()
 
@@ -27,7 +24,7 @@
     Private Sub CBUkuran_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBUkuran.SelectedIndexChanged
         selectedIndexUkuran = CBUkuran.SelectedIndex
         UpdateAvailableLocker()
-        biayaPerjam = GetIntegerValue(dataJenisLocker.Rows(selectedIndexUkuran)("Biaya").ToString())
+        biayaPerjam = DataSewa.getNumeric(dataJenisLocker.Rows(selectedIndexUkuran)("Biaya").ToString())
         If (TxtLamaSewa.TextLength > 0) Then
             Dim totalBiaya = biayaPerjam * Integer.Parse(TxtLamaSewa.Text)
             LblBiayaSewaValue.Text = "Rp." & totalBiaya
@@ -57,19 +54,16 @@
         End If
     End Sub
 
-    Private Function GetIntegerValue(S As String) As String
-        Return New String(S.Where(Function(x As Char) System.Char.IsDigit(x)).ToArray)
-    End Function
-
     Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
-        If CBUkuran.Items.Count > 0 Then
-            If (validData And TxtLamaSewa.TextLength > 0) Then
-                Dim selectedLockerID = availabeLocker.Rows(CBLocker.SelectedIndex)("ID")
-                DataSewa.Sewa.InsertDataSewaDatabase(selectedLockerID, (Integer.Parse(TxtLamaSewa.Text)) * biayaPerjam, Integer.Parse(TxtLamaSewa.Text))
-                Me.Close()
-            Else
-                MessageBox.Show("Harap pilih nomor locker dan isi lama durasi sewa")
-            End If
+        If CBUkuran.Items.Count > 0 And TxtLamaSewa.TextLength > 0 Then
+            DataSewa.Locker.IDLockerProperty = availabeLocker.Rows(CBLocker.SelectedIndex)("ID")
+            DataSewa.Sewa.TagihanAwalProperty = (Integer.Parse(TxtLamaSewa.Text)) * biayaPerjam
+            DataSewa.Sewa.LamaPinjamProperty = Integer.Parse(TxtLamaSewa.Text)
+
+            DataSewa.Sewa.InsertDataSewaDatabase(DataSewa.Locker.IDLockerProperty, DataSewa.Sewa.TagihanAwalProperty, DataSewa.Sewa.LamaPinjamProperty)
+            Me.Close()
+        Else
+            MessageBox.Show("Harap pilih nomor locker dan isi lama durasi sewa")
         End If
     End Sub
 

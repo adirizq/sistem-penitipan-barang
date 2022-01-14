@@ -6,13 +6,13 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        LblLockerValue.Text = "Locker " & MonitorLocker.selectedLockerNama
-        LblIDValue.Text = "ID Locker: " & MonitorLocker.selectedLockerID
+        LblLockerValue.Text = "Locker " & MonitorLocker.Locker.NamaLockerProperty
+        LblIDValue.Text = "ID Locker: " & MonitorLocker.Locker.IDLockerProperty
 
     End Sub
 
     Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles BtnHapus.Click
-        MonitorLocker.Locker.DeleteDataLocker(MonitorLocker.selectedLockerID)
+        MonitorLocker.Locker.DeleteDataLocker(MonitorLocker.Locker.IDLockerProperty)
         Me.Close()
     End Sub
 

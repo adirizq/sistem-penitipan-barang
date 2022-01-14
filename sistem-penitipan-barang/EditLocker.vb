@@ -12,19 +12,21 @@
 
         ' Add any initialization after the InitializeComponent() call.
         dataJenisLocker = MonitorLocker.ClassJenisLocker.GetDataJenisUkuranDatabase()
-        lockerInfo = MonitorLocker.Locker.GetLockerInformationByID(MonitorLocker.selectedLockerID)
 
         CBUkuran.DataSource = dataJenisLocker
         CBUkuran.DisplayMember = "Ukuran"
+        CBUkuran.ValueMember = "Ukuran"
+        CBUkuran.SelectedValue = MonitorLocker.ClassJenisLocker.ukuranJenisLocker
 
-        titleLbl.Text = "Locker " & MonitorLocker.selectedLockerNama
-        LblID.Text = MonitorLocker.selectedLockerID
+        titleLbl.Text = "Locker " & MonitorLocker.Locker.NamaLockerProperty
+        LblID.Text = MonitorLocker.Locker.IDLockerProperty
 
         selectedIndexUkuran = CBUkuran.SelectedIndex
         LblBiayaValue.Text = dataJenisLocker.Rows(selectedIndexUkuran)("Biaya")
 
-        TxtNama.Text = lockerInfo(2)
-        TxtLokasi.Text = lockerInfo(3)
+
+        TxtNama.Text = MonitorLocker.Locker.NamaLockerProperty
+        TxtLokasi.Text = MonitorLocker.Locker.LokasiProperty
 
     End Sub
 
@@ -35,12 +37,10 @@
 
     Private Sub BtnUpdateLocker_Click(sender As Object, e As EventArgs) Handles BtnUpdateLocker.Click
         Dim idUkuranNew = dataJenisLocker.Rows(selectedIndexUkuran)("id")
-        Dim namaNew = TxtNama.Text
-        Dim lokasiNew = TxtLokasi.Text
+        MonitorLocker.Locker.NamaLockerProperty = TxtNama.Text
+        MonitorLocker.Locker.LokasiProperty = TxtLokasi.Text
 
-        Dim selectedItem = CBUkuran.SelectedItem()
-
-        MonitorLocker.Locker.UpdateLockerDataByID(MonitorLocker.selectedLockerID, idUkuranNew, namaNew, lokasiNew)
+        MonitorLocker.Locker.UpdateLockerDataByID(MonitorLocker.Locker.IDLockerProperty, idUkuranNew, MonitorLocker.Locker.NamaLockerProperty, MonitorLocker.Locker.LokasiProperty)
 
         Me.Close()
     End Sub
