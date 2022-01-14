@@ -1,6 +1,6 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Server version:               10.4.22-MariaDB - mariadb.org binary distribution
+-- Server version:               10.4.22-MariaDB-log - mariadb.org binary distribution
 -- Server OS:                    Win64
 -- HeidiSQL Version:             11.3.0.6295
 -- --------------------------------------------------------
@@ -25,43 +25,24 @@ CREATE TABLE IF NOT EXISTS `jenis_ukuran` (
   `ukuran` varchar(255) NOT NULL,
   `biaya` int(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table sistem_penitipan_barang.jenis_ukuran: ~3 rows (approximately)
-DELETE FROM `jenis_ukuran`;
-/*!40000 ALTER TABLE `jenis_ukuran` DISABLE KEYS */;
-INSERT INTO `jenis_ukuran` (`id`, `ukuran`, `biaya`) VALUES
-	(1, 'Kecil', 10000),
-	(2, 'Sedang', 20000),
-	(3, 'Besar', 30000);
-/*!40000 ALTER TABLE `jenis_ukuran` ENABLE KEYS */;
+-- Data exporting was unselected.
 
 -- Dumping structure for table sistem_penitipan_barang.locker
 DROP TABLE IF EXISTS `locker`;
 CREATE TABLE IF NOT EXISTS `locker` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `id_ukuran` int(10) NOT NULL,
+  `nama` varchar(255) NOT NULL,
   `lokasi` varchar(255) NOT NULL,
   `status` varchar(255) NOT NULL DEFAULT 'Kosong',
   PRIMARY KEY (`id`),
   KEY `locker_jenis_ukuran_fk` (`id_ukuran`),
   CONSTRAINT `locker_jenis_ukuran_fk` FOREIGN KEY (`id_ukuran`) REFERENCES `jenis_ukuran` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table sistem_penitipan_barang.locker: ~9 rows (approximately)
-DELETE FROM `locker`;
-/*!40000 ALTER TABLE `locker` DISABLE KEYS */;
-INSERT INTO `locker` (`id`, `id_ukuran`, `lokasi`, `status`) VALUES
-	(1, 1, 'AA', 'Kosong'),
-	(2, 1, 'AA', 'Kosong'),
-	(3, 1, 'AA', 'Kosong'),
-	(4, 2, 'AB', 'Kosong'),
-	(5, 2, 'AB', 'Kosong'),
-	(6, 2, 'AB', 'Kosong'),
-	(7, 3, 'BA', 'Kosong'),
-	(8, 3, 'BA', 'Kosong'),
-	(9, 3, 'BB', 'Kosong');
-/*!40000 ALTER TABLE `locker` ENABLE KEYS */;
+-- Data exporting was unselected.
 
 -- Dumping structure for table sistem_penitipan_barang.penyewaan
 DROP TABLE IF EXISTS `penyewaan`;
@@ -77,12 +58,9 @@ CREATE TABLE IF NOT EXISTS `penyewaan` (
   PRIMARY KEY (`id`),
   KEY `penyewaan_locker_fk` (`id_locker`),
   CONSTRAINT `penyewaan_locker_fk` FOREIGN KEY (`id_locker`) REFERENCES `locker` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table sistem_penitipan_barang.penyewaan: ~1 rows (approximately)
-DELETE FROM `penyewaan`;
-/*!40000 ALTER TABLE `penyewaan` DISABLE KEYS */;
-/*!40000 ALTER TABLE `penyewaan` ENABLE KEYS */;
+-- Data exporting was unselected.
 
 -- Dumping structure for table sistem_penitipan_barang.users
 DROP TABLE IF EXISTS `users`;
@@ -94,12 +72,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table sistem_penitipan_barang.users: ~2 rows (approximately)
-DELETE FROM `users`;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
-	(1, 'admin', 'contact@admin.com', '21232f297a57a5a743894a0e4a801fc3');
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+-- Data exporting was unselected.
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;

@@ -3,8 +3,6 @@
     Private dataJenisLocker As DataTable
     Private selectedIndexUkuran As Integer
 
-    Private jenisUkuran
-    Private lockerInfo
     Public Sub New()
 
         ' This call is required by the designer.

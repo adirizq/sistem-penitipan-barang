@@ -1,5 +1,4 @@
-﻿Imports System.Text
-Imports MySql.Data.MySqlClient
+﻿Imports MySql.Data.MySqlClient
 
 Public Class ClassJenisLocker
 
