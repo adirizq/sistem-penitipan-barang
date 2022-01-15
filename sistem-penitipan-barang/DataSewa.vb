@@ -24,6 +24,7 @@
 
         If (DataGridViewDataSewa.Rows.Count > 0) Then
             DataGridViewDataSewa.CurrentCell = DataGridViewDataSewa.Rows(0).Cells(0)
+            selectedRow = DataGridViewDataSewa.Rows(0)
         End If
 
     End Sub
@@ -40,6 +41,7 @@
 
         If (DataGridViewDataSewa.Rows.Count > 0) Then
             DataGridViewDataSewa.CurrentCell = DataGridViewDataSewa.Rows(0).Cells(0)
+            selectedRow = DataGridViewDataSewa.Rows(0)
         End If
 
         signOut = False
@@ -62,8 +64,13 @@
     End Sub
 
     Private Sub BtnTambahData_Click(sender As Object, e As EventArgs) Handles BtnTambahData.Click
-        Dim tambahSewa = New AddSewa
-        tambahSewa.Show()
+        Dim dataJenisLocker = DataSewa.ClassJenisLocker.GetDataJenisUkuranDatabase()
+        If dataJenisLocker.Rows.Count < 1 Then
+            MessageBox.Show("Belum ada data locker, harap buat locker terlebih dahulu!")
+        Else
+            Dim tambahSewa = New AddSewa
+            tambahSewa.Show()
+        End If
     End Sub
 
     Private Sub BtnPengembalian_Click(sender As Object, e As EventArgs) Handles BtnPengembalian.Click

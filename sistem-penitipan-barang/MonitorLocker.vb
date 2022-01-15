@@ -86,8 +86,13 @@
     End Sub
 
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
-        Dim tambahLocker = New TambahLocker
-        tambahLocker.Show()
+        Dim dataJenisLocker = MonitorLocker.ClassJenisLocker.GetDataJenisUkuranDatabase()
+        If dataJenisLocker.Rows.Count < 1 Then
+            MessageBox.Show("Belum ada data jenis locker, harap buat jenis locker terlebih dahulu!")
+        Else
+            Dim tambahLocker = New TambahLocker
+            tambahLocker.Show()
+        End If
     End Sub
 
     Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles BtnHapus.Click

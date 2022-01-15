@@ -55,7 +55,7 @@
     End Sub
 
     Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
-        If CBUkuran.Items.Count > 0 And TxtLamaSewa.TextLength > 0 Then
+        If CBUkuran.Items.Count > 0 And CBLocker.Items.Count > 0 And TxtLamaSewa.TextLength > 0 Then
             DataSewa.Locker.IDLockerProperty = availabeLocker.Rows(CBLocker.SelectedIndex)("ID")
             DataSewa.Sewa.TagihanAwalProperty = (Integer.Parse(TxtLamaSewa.Text)) * biayaPerjam
             DataSewa.Sewa.LamaPinjamProperty = Integer.Parse(TxtLamaSewa.Text)
@@ -63,7 +63,7 @@
             DataSewa.Sewa.InsertDataSewaDatabase(DataSewa.Locker.IDLockerProperty, DataSewa.Sewa.TagihanAwalProperty, DataSewa.Sewa.LamaPinjamProperty)
             Me.Close()
         Else
-            MessageBox.Show("Harap pilih nomor locker dan isi lama durasi sewa")
+            MessageBox.Show("Harap pilih locker dan isi lama durasi sewa")
         End If
     End Sub
 
