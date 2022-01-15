@@ -22,13 +22,15 @@ Merupakan sistem manajemen penitipan barang loker yang dilengkapi dengan perhitu
 3. Form Sewa (menampilkan form dengan textbox rencana sewa (waktu) dan akan tampil biaya sewa total ”Hanya Input Sewa dan Waktu sewa (dalam jam)”)
 4. Form Kembali  
 5. Form Monitor Locker (Data Grid View Locker)
-6. Edit Locker 
-7. Ganti Status Locker (Isi, Kosong)
-8. Form Data Sewa (Data Grid View Sewa)
-9. Form Jenis Locker (Data Grid View Jenis Locker)
-10. Tambah Jenis Locker
-11. Update Jenis Locker
-12. Hapus Jenis Locker
+6. Tambah Locker
+7. Edit Locker 
+8. Ganti Status Locker (Isi, Kosong)
+9. Hapus Locker
+10. Form Data Sewa (Data Grid View Sewa)
+11. Form Jenis Locker (Data Grid View Jenis Locker)
+12. Tambah Jenis Locker
+13. Update Jenis Locker
+14. Hapus Jenis Locker
 
 ### Fitur
 1. Dapat Sign In dan Sign Out
