@@ -18,7 +18,7 @@
         Locker = New Locker()
         ClassJenisLocker = New ClassJenisLocker()
 
-        LblUserIdentity.Text = Login.data_user(1).ToString() + "  [ID: " + Login.data_user(0).ToString() + "]"
+        'LblUserIdentity.Text = Login.data_user(1).ToString() + "  [ID: " + Login.data_user(0).ToString() + "]"
 
         ReloadDataTableDatabase()
 
@@ -103,14 +103,14 @@
         Dim result As DialogResult = MessageBox.Show("Are you sure you want to sign out?", "Confirmation", MessageBoxButtons.YesNo)
         If result = DialogResult.Yes Then
             signOut = True
-            Login.Show()
+            'Login.Show()
             Me.Close()
         End If
     End Sub
 
     Private Sub DataSewa_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         If Not signOut Then
-            Login.Close()
+            'Login.Close()
         End If
     End Sub
 

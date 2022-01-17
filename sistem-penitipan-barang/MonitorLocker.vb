@@ -17,7 +17,7 @@
         ClassJenisLocker = DataSewa.ClassJenisLocker
         ReloadDataTableDatabase()
 
-        LblUserIdentity.Text = Login.data_user(1).ToString() + "  [ID: " + Login.data_user(0).ToString() + "]"
+        'LblUserIdentity.Text = Login.data_user(1).ToString() + "  [ID: " + Login.data_user(0).ToString() + "]"
 
         If (DataGridViewMonitorLocker.Rows.Count > 0) Then
             DataGridViewMonitorLocker.Rows(0).Cells(0).Selected = True
