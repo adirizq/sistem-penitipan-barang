@@ -1,4 +1,6 @@
-﻿Public Class TambahJenisLocker
+﻿Imports System.ComponentModel
+
+Public Class TambahJenisLocker
 
     Public Sub New()
 
@@ -24,4 +26,5 @@
             MessageBox.Show("Masukan Hanya Angka")
         End If
     End Sub
+
 End Class

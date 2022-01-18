@@ -24,47 +24,40 @@ Partial Class JenisLocker
     Private Sub InitializeComponent()
         Me.BtnTambah = New System.Windows.Forms.Button()
         Me.BtnHapus = New System.Windows.Forms.Button()
-        Me.titleLbl = New System.Windows.Forms.Label()
         Me.DataGridViewJenisLocker = New System.Windows.Forms.DataGridView()
         Me.BtnUpdate = New System.Windows.Forms.Button()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.DataSewaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MonitorLockerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.JenisLockerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.lblTitle = New System.Windows.Forms.Label()
         Me.LblUserIdentity = New System.Windows.Forms.Label()
         CType(Me.DataGridViewJenisLocker, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'BtnTambah
         '
-        Me.BtnTambah.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnTambah.Location = New System.Drawing.Point(356, 362)
+        Me.BtnTambah.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(122, Byte), Integer))
+        Me.BtnTambah.FlatAppearance.BorderSize = 0
+        Me.BtnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnTambah.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnTambah.ForeColor = System.Drawing.Color.White
+        Me.BtnTambah.Location = New System.Drawing.Point(742, 538)
         Me.BtnTambah.Name = "BtnTambah"
-        Me.BtnTambah.Size = New System.Drawing.Size(98, 28)
+        Me.BtnTambah.Size = New System.Drawing.Size(100, 30)
         Me.BtnTambah.TabIndex = 6
         Me.BtnTambah.Text = "Tambah"
-        Me.BtnTambah.UseVisualStyleBackColor = True
+        Me.BtnTambah.UseVisualStyleBackColor = False
         '
         'BtnHapus
         '
-        Me.BtnHapus.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnHapus.Location = New System.Drawing.Point(576, 363)
+        Me.BtnHapus.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(122, Byte), Integer))
+        Me.BtnHapus.FlatAppearance.BorderSize = 0
+        Me.BtnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnHapus.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnHapus.ForeColor = System.Drawing.Color.White
+        Me.BtnHapus.Location = New System.Drawing.Point(976, 538)
         Me.BtnHapus.Name = "BtnHapus"
-        Me.BtnHapus.Size = New System.Drawing.Size(84, 28)
+        Me.BtnHapus.Size = New System.Drawing.Size(100, 30)
         Me.BtnHapus.TabIndex = 4
         Me.BtnHapus.Text = "Hapus"
-        Me.BtnHapus.UseVisualStyleBackColor = True
-        '
-        'titleLbl
-        '
-        Me.titleLbl.AutoSize = True
-        Me.titleLbl.Font = New System.Drawing.Font("Microsoft Tai Le", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.titleLbl.Location = New System.Drawing.Point(20, 40)
-        Me.titleLbl.Name = "titleLbl"
-        Me.titleLbl.Size = New System.Drawing.Size(170, 34)
-        Me.titleLbl.TabIndex = 5
-        Me.titleLbl.Text = "Jenis Locker"
+        Me.BtnHapus.UseVisualStyleBackColor = False
         '
         'DataGridViewJenisLocker
         '
@@ -72,83 +65,71 @@ Partial Class JenisLocker
         Me.DataGridViewJenisLocker.AllowUserToDeleteRows = False
         Me.DataGridViewJenisLocker.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridViewJenisLocker.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewJenisLocker.Location = New System.Drawing.Point(26, 90)
+        Me.DataGridViewJenisLocker.Location = New System.Drawing.Point(32, 70)
         Me.DataGridViewJenisLocker.Name = "DataGridViewJenisLocker"
         Me.DataGridViewJenisLocker.ReadOnly = True
         Me.DataGridViewJenisLocker.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
-        Me.DataGridViewJenisLocker.Size = New System.Drawing.Size(634, 250)
+        Me.DataGridViewJenisLocker.Size = New System.Drawing.Size(1046, 450)
         Me.DataGridViewJenisLocker.TabIndex = 3
         '
         'BtnUpdate
         '
-        Me.BtnUpdate.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnUpdate.Location = New System.Drawing.Point(466, 363)
+        Me.BtnUpdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(122, Byte), Integer))
+        Me.BtnUpdate.FlatAppearance.BorderSize = 0
+        Me.BtnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnUpdate.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnUpdate.ForeColor = System.Drawing.Color.White
+        Me.BtnUpdate.Location = New System.Drawing.Point(859, 538)
         Me.BtnUpdate.Name = "BtnUpdate"
-        Me.BtnUpdate.Size = New System.Drawing.Size(98, 28)
+        Me.BtnUpdate.Size = New System.Drawing.Size(100, 30)
         Me.BtnUpdate.TabIndex = 7
         Me.BtnUpdate.Text = "Update"
-        Me.BtnUpdate.UseVisualStyleBackColor = True
+        Me.BtnUpdate.UseVisualStyleBackColor = False
         '
-        'MenuStrip1
+        'lblTitle
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataSewaToolStripMenuItem, Me.MonitorLockerToolStripMenuItem, Me.JenisLockerToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(684, 24)
-        Me.MenuStrip1.TabIndex = 8
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'DataSewaToolStripMenuItem
-        '
-        Me.DataSewaToolStripMenuItem.Name = "DataSewaToolStripMenuItem"
-        Me.DataSewaToolStripMenuItem.Size = New System.Drawing.Size(73, 20)
-        Me.DataSewaToolStripMenuItem.Text = "Data Sewa"
-        '
-        'MonitorLockerToolStripMenuItem
-        '
-        Me.MonitorLockerToolStripMenuItem.Name = "MonitorLockerToolStripMenuItem"
-        Me.MonitorLockerToolStripMenuItem.Size = New System.Drawing.Size(100, 20)
-        Me.MonitorLockerToolStripMenuItem.Text = "Monitor Locker"
-        '
-        'JenisLockerToolStripMenuItem
-        '
-        Me.JenisLockerToolStripMenuItem.Name = "JenisLockerToolStripMenuItem"
-        Me.JenisLockerToolStripMenuItem.Size = New System.Drawing.Size(82, 20)
-        Me.JenisLockerToolStripMenuItem.Text = "Jenis Locker"
+        Me.lblTitle.AutoSize = True
+        Me.lblTitle.Font = New System.Drawing.Font("Poppins", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(122, Byte), Integer))
+        Me.lblTitle.Location = New System.Drawing.Point(26, 22)
+        Me.lblTitle.Name = "lblTitle"
+        Me.lblTitle.Size = New System.Drawing.Size(136, 34)
+        Me.lblTitle.TabIndex = 18
+        Me.lblTitle.Text = "Jenis Locker"
+        Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LblUserIdentity
         '
         Me.LblUserIdentity.AutoSize = True
-        Me.LblUserIdentity.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblUserIdentity.Location = New System.Drawing.Point(580, 58)
+        Me.LblUserIdentity.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblUserIdentity.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(122, Byte), Integer))
+        Me.LblUserIdentity.Location = New System.Drawing.Point(974, 33)
         Me.LblUserIdentity.Name = "LblUserIdentity"
-        Me.LblUserIdentity.Size = New System.Drawing.Size(80, 16)
-        Me.LblUserIdentity.TabIndex = 10
-        Me.LblUserIdentity.Text = "Admin  [ID1]"
-        Me.LblUserIdentity.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.LblUserIdentity.Size = New System.Drawing.Size(104, 23)
+        Me.LblUserIdentity.TabIndex = 17
+        Me.LblUserIdentity.Text = "Admin  [ID : 1]"
+        Me.LblUserIdentity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'JenisLocker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(684, 416)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(236, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1110, 600)
+        Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.LblUserIdentity)
-        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.BtnUpdate)
         Me.Controls.Add(Me.BtnTambah)
         Me.Controls.Add(Me.BtnHapus)
-        Me.Controls.Add(Me.titleLbl)
         Me.Controls.Add(Me.DataGridViewJenisLocker)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(700, 455)
-        Me.MinimumSize = New System.Drawing.Size(700, 455)
+        Me.MaximumSize = New System.Drawing.Size(1110, 600)
+        Me.MinimumSize = New System.Drawing.Size(1110, 600)
         Me.Name = "JenisLocker"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "JenisLocker"
         CType(Me.DataGridViewJenisLocker, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -156,12 +137,8 @@ Partial Class JenisLocker
 
     Friend WithEvents BtnTambah As Button
     Friend WithEvents BtnHapus As Button
-    Friend WithEvents titleLbl As Label
     Friend WithEvents DataGridViewJenisLocker As DataGridView
     Friend WithEvents BtnUpdate As Button
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents DataSewaToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents MonitorLockerToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents JenisLockerToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents lblTitle As Label
     Friend WithEvents LblUserIdentity As Label
 End Class

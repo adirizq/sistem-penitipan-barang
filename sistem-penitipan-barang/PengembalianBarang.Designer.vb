@@ -37,13 +37,11 @@ Partial Class PengembalianBarang
         'LblDendaValue
         '
         Me.LblDendaValue.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LblDendaValue.Font = New System.Drawing.Font("Microsoft Tai Le", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblDendaValue.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblDendaValue.ForeColor = System.Drawing.Color.Firebrick
-        Me.LblDendaValue.Location = New System.Drawing.Point(0, 305)
-        Me.LblDendaValue.MaximumSize = New System.Drawing.Size(373, 31)
-        Me.LblDendaValue.MinimumSize = New System.Drawing.Size(373, 31)
+        Me.LblDendaValue.Location = New System.Drawing.Point(0, 326)
         Me.LblDendaValue.Name = "LblDendaValue"
-        Me.LblDendaValue.Size = New System.Drawing.Size(373, 31)
+        Me.LblDendaValue.Size = New System.Drawing.Size(380, 31)
         Me.LblDendaValue.TabIndex = 16
         Me.LblDendaValue.Text = "Rp.100000"
         Me.LblDendaValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -51,39 +49,37 @@ Partial Class PengembalianBarang
         'LblDenda
         '
         Me.LblDenda.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LblDenda.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblDenda.Location = New System.Drawing.Point(0, 282)
-        Me.LblDenda.MaximumSize = New System.Drawing.Size(373, 16)
-        Me.LblDenda.MinimumSize = New System.Drawing.Size(373, 16)
+        Me.LblDenda.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblDenda.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(122, Byte), Integer))
+        Me.LblDenda.Location = New System.Drawing.Point(0, 303)
         Me.LblDenda.Name = "LblDenda"
-        Me.LblDenda.Size = New System.Drawing.Size(373, 16)
+        Me.LblDenda.Size = New System.Drawing.Size(380, 18)
         Me.LblDenda.TabIndex = 17
         Me.LblDenda.Text = "Denda"
         Me.LblDenda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'titleLbl
         '
-        Me.titleLbl.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.titleLbl.Font = New System.Drawing.Font("Microsoft Tai Le", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.titleLbl.Location = New System.Drawing.Point(0, 25)
+        Me.titleLbl.Dock = System.Windows.Forms.DockStyle.Top
+        Me.titleLbl.Font = New System.Drawing.Font("Poppins", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.titleLbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(122, Byte), Integer))
+        Me.titleLbl.Location = New System.Drawing.Point(0, 0)
         Me.titleLbl.Margin = New System.Windows.Forms.Padding(3, 20, 3, 0)
-        Me.titleLbl.MaximumSize = New System.Drawing.Size(373, 34)
-        Me.titleLbl.MinimumSize = New System.Drawing.Size(373, 34)
         Me.titleLbl.Name = "titleLbl"
-        Me.titleLbl.Size = New System.Drawing.Size(373, 34)
+        Me.titleLbl.Padding = New System.Windows.Forms.Padding(0, 32, 0, 0)
+        Me.titleLbl.Size = New System.Drawing.Size(380, 65)
         Me.titleLbl.TabIndex = 0
         Me.titleLbl.Text = "Pengembalian Barang"
-        Me.titleLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.titleLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'LblSewa
         '
         Me.LblSewa.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LblSewa.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblSewa.Location = New System.Drawing.Point(0, 98)
-        Me.LblSewa.MaximumSize = New System.Drawing.Size(373, 16)
-        Me.LblSewa.MinimumSize = New System.Drawing.Size(373, 16)
+        Me.LblSewa.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSewa.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(122, Byte), Integer))
+        Me.LblSewa.Location = New System.Drawing.Point(0, 104)
         Me.LblSewa.Name = "LblSewa"
-        Me.LblSewa.Size = New System.Drawing.Size(373, 16)
+        Me.LblSewa.Size = New System.Drawing.Size(380, 18)
         Me.LblSewa.TabIndex = 18
         Me.LblSewa.Text = "No Sewa :"
         Me.LblSewa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -91,12 +87,11 @@ Partial Class PengembalianBarang
         'LblNoSewaValue
         '
         Me.LblNoSewaValue.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LblNoSewaValue.Font = New System.Drawing.Font("Microsoft Tai Le", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblNoSewaValue.Location = New System.Drawing.Point(0, 118)
-        Me.LblNoSewaValue.MaximumSize = New System.Drawing.Size(373, 21)
-        Me.LblNoSewaValue.MinimumSize = New System.Drawing.Size(373, 21)
+        Me.LblNoSewaValue.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNoSewaValue.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(122, Byte), Integer))
+        Me.LblNoSewaValue.Location = New System.Drawing.Point(0, 124)
         Me.LblNoSewaValue.Name = "LblNoSewaValue"
-        Me.LblNoSewaValue.Size = New System.Drawing.Size(373, 21)
+        Me.LblNoSewaValue.Size = New System.Drawing.Size(380, 23)
         Me.LblNoSewaValue.TabIndex = 18
         Me.LblNoSewaValue.Text = "1"
         Me.LblNoSewaValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -104,12 +99,11 @@ Partial Class PengembalianBarang
         'LblLocker
         '
         Me.LblLocker.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LblLocker.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblLocker.Location = New System.Drawing.Point(0, 152)
-        Me.LblLocker.MaximumSize = New System.Drawing.Size(373, 16)
-        Me.LblLocker.MinimumSize = New System.Drawing.Size(373, 16)
+        Me.LblLocker.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblLocker.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(122, Byte), Integer))
+        Me.LblLocker.Location = New System.Drawing.Point(0, 158)
         Me.LblLocker.Name = "LblLocker"
-        Me.LblLocker.Size = New System.Drawing.Size(373, 16)
+        Me.LblLocker.Size = New System.Drawing.Size(380, 18)
         Me.LblLocker.TabIndex = 18
         Me.LblLocker.Text = "Nama Locker :"
         Me.LblLocker.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -117,12 +111,11 @@ Partial Class PengembalianBarang
         'LblNamaLockerValue
         '
         Me.LblNamaLockerValue.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LblNamaLockerValue.Font = New System.Drawing.Font("Microsoft Tai Le", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblNamaLockerValue.Location = New System.Drawing.Point(0, 173)
-        Me.LblNamaLockerValue.MaximumSize = New System.Drawing.Size(373, 21)
-        Me.LblNamaLockerValue.MinimumSize = New System.Drawing.Size(373, 21)
+        Me.LblNamaLockerValue.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNamaLockerValue.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(122, Byte), Integer))
+        Me.LblNamaLockerValue.Location = New System.Drawing.Point(0, 179)
         Me.LblNamaLockerValue.Name = "LblNamaLockerValue"
-        Me.LblNamaLockerValue.Size = New System.Drawing.Size(373, 21)
+        Me.LblNamaLockerValue.Size = New System.Drawing.Size(380, 23)
         Me.LblNamaLockerValue.TabIndex = 18
         Me.LblNamaLockerValue.Text = "1"
         Me.LblNamaLockerValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -130,12 +123,11 @@ Partial Class PengembalianBarang
         'LblKeterlambatan
         '
         Me.LblKeterlambatan.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LblKeterlambatan.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblKeterlambatan.Location = New System.Drawing.Point(0, 206)
-        Me.LblKeterlambatan.MaximumSize = New System.Drawing.Size(373, 16)
-        Me.LblKeterlambatan.MinimumSize = New System.Drawing.Size(373, 16)
+        Me.LblKeterlambatan.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblKeterlambatan.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(122, Byte), Integer))
+        Me.LblKeterlambatan.Location = New System.Drawing.Point(0, 212)
         Me.LblKeterlambatan.Name = "LblKeterlambatan"
-        Me.LblKeterlambatan.Size = New System.Drawing.Size(373, 16)
+        Me.LblKeterlambatan.Size = New System.Drawing.Size(380, 18)
         Me.LblKeterlambatan.TabIndex = 18
         Me.LblKeterlambatan.Text = "Keterlambatan :"
         Me.LblKeterlambatan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -143,12 +135,11 @@ Partial Class PengembalianBarang
         'LblKeterlambatanValue
         '
         Me.LblKeterlambatanValue.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LblKeterlambatanValue.Font = New System.Drawing.Font("Microsoft Tai Le", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblKeterlambatanValue.Location = New System.Drawing.Point(0, 228)
-        Me.LblKeterlambatanValue.MaximumSize = New System.Drawing.Size(373, 21)
-        Me.LblKeterlambatanValue.MinimumSize = New System.Drawing.Size(373, 21)
+        Me.LblKeterlambatanValue.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblKeterlambatanValue.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(122, Byte), Integer))
+        Me.LblKeterlambatanValue.Location = New System.Drawing.Point(0, 234)
         Me.LblKeterlambatanValue.Name = "LblKeterlambatanValue"
-        Me.LblKeterlambatanValue.Size = New System.Drawing.Size(373, 21)
+        Me.LblKeterlambatanValue.Size = New System.Drawing.Size(380, 23)
         Me.LblKeterlambatanValue.TabIndex = 18
         Me.LblKeterlambatanValue.Text = "AA"
         Me.LblKeterlambatanValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -156,21 +147,24 @@ Partial Class PengembalianBarang
         'btnKonfirmasi
         '
         Me.btnKonfirmasi.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnKonfirmasi.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnKonfirmasi.Location = New System.Drawing.Point(25, 384)
-        Me.btnKonfirmasi.MaximumSize = New System.Drawing.Size(323, 28)
-        Me.btnKonfirmasi.MinimumSize = New System.Drawing.Size(323, 28)
+        Me.btnKonfirmasi.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(122, Byte), Integer))
+        Me.btnKonfirmasi.FlatAppearance.BorderSize = 0
+        Me.btnKonfirmasi.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnKonfirmasi.Font = New System.Drawing.Font("Poppins SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnKonfirmasi.ForeColor = System.Drawing.Color.White
+        Me.btnKonfirmasi.Location = New System.Drawing.Point(32, 422)
         Me.btnKonfirmasi.Name = "btnKonfirmasi"
-        Me.btnKonfirmasi.Size = New System.Drawing.Size(323, 28)
+        Me.btnKonfirmasi.Size = New System.Drawing.Size(316, 30)
         Me.btnKonfirmasi.TabIndex = 1
         Me.btnKonfirmasi.Text = "Konfirmasi Pengembalian"
-        Me.btnKonfirmasi.UseVisualStyleBackColor = True
+        Me.btnKonfirmasi.UseVisualStyleBackColor = False
         '
         'PengembalianBarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(373, 434)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(236, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(380, 484)
         Me.Controls.Add(Me.btnKonfirmasi)
         Me.Controls.Add(Me.LblKeterlambatanValue)
         Me.Controls.Add(Me.LblKeterlambatan)
@@ -183,11 +177,9 @@ Partial Class PengembalianBarang
         Me.Controls.Add(Me.titleLbl)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(389, 473)
-        Me.MinimumSize = New System.Drawing.Size(389, 473)
         Me.Name = "PengembalianBarang"
+        Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Pengembalian Barang"
         Me.ResumeLayout(False)
 
     End Sub

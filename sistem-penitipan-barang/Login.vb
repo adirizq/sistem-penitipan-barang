@@ -1,6 +1,5 @@
 ﻿Public Class Login
 
-    Public Shared Datasewa As DataSewa
     Public Shared User As User
     Public Shared data_user As List(Of String)
 
@@ -30,8 +29,8 @@
 
         If data_user.Count > 0 Then
             User.GSUsername = data_user(1)
-            Datasewa = New DataSewa()
-            Datasewa.Show()
+            Dim Main As Main = New Main()
+            Main.Show()
             Me.Hide()
         Else
             MessageBox.Show("Wrong username or password")

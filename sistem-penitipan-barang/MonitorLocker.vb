@@ -4,7 +4,6 @@
     Public Shared ClassJenisLocker As ClassJenisLocker
 
     Private selectedRow As DataGridViewRow
-    Private toJenisLocker = False
     Private lockerData As DataTable
 
     Public Sub New()
@@ -13,16 +12,20 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        Locker = DataSewa.Locker
-        ClassJenisLocker = DataSewa.ClassJenisLocker
-        ReloadDataTableDatabase()
+        Locker = Main.Locker
+        ClassJenisLocker = Main.ClassJenisLocker
 
         'LblUserIdentity.Text = Login.data_user(1).ToString() + "  [ID: " + Login.data_user(0).ToString() + "]"
+
+        ReloadDataTableDatabase()
 
         If (DataGridViewMonitorLocker.Rows.Count > 0) Then
             DataGridViewMonitorLocker.Rows(0).Cells(0).Selected = True
             selectedRow = DataGridViewMonitorLocker.Rows(0)
+            UpdateLocalLockerData()
         End If
+
+        LblUserIdentity.Text = Login.data_user(1).ToString() + "  [ID: " + Login.data_user(0).ToString() + "]"
 
     End Sub
 
@@ -32,6 +35,7 @@
         If (DataGridViewMonitorLocker.Rows.Count > 0) Then
             DataGridViewMonitorLocker.Rows(0).Cells(0).Selected = True
             selectedRow = DataGridViewMonitorLocker.Rows(0)
+            UpdateLocalLockerData()
         End If
     End Sub
 
@@ -44,29 +48,12 @@
         Dim index As Integer = e.RowIndex
         If (index >= 0) Then
             selectedRow = DataGridViewMonitorLocker.Rows(index)
+            UpdateLocalLockerData()
         End If
-    End Sub
-
-    Private Sub DataSewaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DataSewaToolStripMenuItem.Click
-        Me.Close()
-        DataSewa.Show()
-    End Sub
-
-    Private Sub MonitorLockerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MonitorLockerToolStripMenuItem.Click
-        Me.Show()
-    End Sub
-
-    Private Sub JenisLockerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles JenisLockerToolStripMenuItem.Click
-        toJenisLocker = True
-        Me.Close()
-        Dim jenisLocker = New JenisLocker
-        jenisLocker.Show()
     End Sub
 
     Private Sub BtnEditLocker_Click(sender As Object, e As EventArgs) Handles BtnEditLocker.Click
         If lockerData.Rows.Count > 0 Then
-            UpdateLocalLockerData()
-
             Dim editLocker = New EditLocker
             editLocker.Show()
         Else
@@ -76,8 +63,6 @@
 
     Private Sub BtnUpdateStatus_Click(sender As Object, e As EventArgs) Handles BtnUpdateStatus.Click
         If lockerData.Rows.Count > 0 Then
-            UpdateLocalLockerData()
-
             Dim updateStatus = New UpdateStatusLocker
             updateStatus.Show()
         Else
@@ -97,18 +82,10 @@
 
     Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles BtnHapus.Click
         If lockerData.Rows.Count > 0 Then
-            UpdateLocalLockerData()
-
             Dim hapusLocker = New HapusLocker
             hapusLocker.Show()
         Else
             MessageBox.Show("No data selected")
-        End If
-    End Sub
-
-    Private Sub MonitorLocker_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        If Not toJenisLocker Then
-            DataSewa.Show()
         End If
     End Sub
 

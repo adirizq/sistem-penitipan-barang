@@ -255,7 +255,7 @@ Public Class Sewa
                                         "tanggal_kembali = '" & DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") & "' " &
                                         "where id = " & ID
 
-            DataSewa.Locker.UpdateLockerStatusByID(IDLocker, "kosong")
+            DataSewa.Locker.UpdateLockerStatusByID(IDLocker, "Kosong")
 
             sqlRead = sqlCommand.ExecuteReader
             sqlRead.Close()

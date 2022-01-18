@@ -37,6 +37,7 @@
         If CBUkuran.Items.Count > 0 Then
             If (TxtLamaSewa.TextLength > 0) Then
                 Dim totalBiaya = biayaPerjam * Integer.Parse(TxtLamaSewa.Text)
+                TxtLamaSewa.Text = TxtLamaSewa.Text
                 LblBiayaSewaValue.Text = "Rp." & totalBiaya
             Else
                 LblBiayaSewaValue.Text = "Rp.0"

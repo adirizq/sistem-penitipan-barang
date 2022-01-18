@@ -17,11 +17,9 @@
         CBUkuran.SelectedValue = MonitorLocker.ClassJenisLocker.ukuranJenisLocker
 
         titleLbl.Text = "Locker " & MonitorLocker.Locker.NamaLockerProperty
-        LblID.Text = MonitorLocker.Locker.IDLockerProperty
 
         selectedIndexUkuran = CBUkuran.SelectedIndex
         LblBiayaValue.Text = dataJenisLocker.Rows(selectedIndexUkuran)("Biaya")
-
 
         TxtNama.Text = MonitorLocker.Locker.NamaLockerProperty
         TxtLokasi.Text = MonitorLocker.Locker.LokasiProperty

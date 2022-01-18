@@ -32,33 +32,40 @@ Partial Class UpdateStatusLocker
         '
         'titleLbl
         '
-        Me.titleLbl.Font = New System.Drawing.Font("Microsoft Tai Le", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.titleLbl.Location = New System.Drawing.Point(20, 20)
-        Me.titleLbl.MaximumSize = New System.Drawing.Size(210, 34)
-        Me.titleLbl.MinimumSize = New System.Drawing.Size(210, 34)
+        Me.titleLbl.Dock = System.Windows.Forms.DockStyle.Top
+        Me.titleLbl.Font = New System.Drawing.Font("Poppins", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.titleLbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(122, Byte), Integer))
+        Me.titleLbl.Location = New System.Drawing.Point(0, 0)
         Me.titleLbl.Name = "titleLbl"
-        Me.titleLbl.Size = New System.Drawing.Size(210, 34)
+        Me.titleLbl.Padding = New System.Windows.Forms.Padding(0, 32, 0, 0)
+        Me.titleLbl.Size = New System.Drawing.Size(360, 62)
         Me.titleLbl.TabIndex = 4
         Me.titleLbl.Text = "Locker"
+        Me.titleLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'BtnUpdateStatus
         '
-        Me.BtnUpdateStatus.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnUpdateStatus.Location = New System.Drawing.Point(104, 187)
+        Me.BtnUpdateStatus.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(122, Byte), Integer))
+        Me.BtnUpdateStatus.FlatAppearance.BorderSize = 0
+        Me.BtnUpdateStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnUpdateStatus.Font = New System.Drawing.Font("Poppins SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnUpdateStatus.ForeColor = System.Drawing.Color.White
+        Me.BtnUpdateStatus.Location = New System.Drawing.Point(32, 238)
         Me.BtnUpdateStatus.Name = "BtnUpdateStatus"
-        Me.BtnUpdateStatus.Size = New System.Drawing.Size(119, 28)
+        Me.BtnUpdateStatus.Size = New System.Drawing.Size(296, 30)
         Me.BtnUpdateStatus.TabIndex = 11
         Me.BtnUpdateStatus.Text = "Update Status"
-        Me.BtnUpdateStatus.UseVisualStyleBackColor = True
+        Me.BtnUpdateStatus.UseVisualStyleBackColor = False
         '
         'GBStatus
         '
         Me.GBStatus.Controls.Add(Me.RDTerisi)
         Me.GBStatus.Controls.Add(Me.RDKosong)
-        Me.GBStatus.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBStatus.Location = New System.Drawing.Point(26, 73)
+        Me.GBStatus.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GBStatus.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(122, Byte), Integer))
+        Me.GBStatus.Location = New System.Drawing.Point(32, 97)
         Me.GBStatus.Name = "GBStatus"
-        Me.GBStatus.Size = New System.Drawing.Size(197, 91)
+        Me.GBStatus.Size = New System.Drawing.Size(296, 91)
         Me.GBStatus.TabIndex = 13
         Me.GBStatus.TabStop = False
         Me.GBStatus.Text = "Status"
@@ -66,9 +73,10 @@ Partial Class UpdateStatusLocker
         'RDTerisi
         '
         Me.RDTerisi.AutoSize = True
+        Me.RDTerisi.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(122, Byte), Integer))
         Me.RDTerisi.Location = New System.Drawing.Point(19, 51)
         Me.RDTerisi.Name = "RDTerisi"
-        Me.RDTerisi.Size = New System.Drawing.Size(57, 20)
+        Me.RDTerisi.Size = New System.Drawing.Size(61, 27)
         Me.RDTerisi.TabIndex = 0
         Me.RDTerisi.TabStop = True
         Me.RDTerisi.Text = "Terisi"
@@ -77,9 +85,10 @@ Partial Class UpdateStatusLocker
         'RDKosong
         '
         Me.RDKosong.AutoSize = True
+        Me.RDKosong.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(122, Byte), Integer))
         Me.RDKosong.Location = New System.Drawing.Point(20, 28)
         Me.RDKosong.Name = "RDKosong"
-        Me.RDKosong.Size = New System.Drawing.Size(71, 20)
+        Me.RDKosong.Size = New System.Drawing.Size(76, 27)
         Me.RDKosong.TabIndex = 0
         Me.RDKosong.TabStop = True
         Me.RDKosong.Text = "Kosong"
@@ -89,17 +98,16 @@ Partial Class UpdateStatusLocker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(251, 241)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(236, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(360, 300)
         Me.Controls.Add(Me.GBStatus)
         Me.Controls.Add(Me.BtnUpdateStatus)
         Me.Controls.Add(Me.titleLbl)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(267, 280)
-        Me.MinimumSize = New System.Drawing.Size(267, 280)
         Me.Name = "UpdateStatusLocker"
+        Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Update Status"
         Me.GBStatus.ResumeLayout(False)
         Me.GBStatus.PerformLayout()
         Me.ResumeLayout(False)

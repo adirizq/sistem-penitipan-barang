@@ -3,7 +3,6 @@
     Public Shared ClassJenisLocker As ClassJenisLocker
     Public Shared selectedJenisLockerID As Integer
 
-    Private toMonitorLocker = False
     Private dataJenisLocker As DataTable
 
     Public Sub New()
@@ -12,7 +11,7 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        ClassJenisLocker = DataSewa.ClassJenisLocker
+        ClassJenisLocker = Main.ClassJenisLocker
         ReloadDataTableDatabase()
 
         'LblUserIdentity.Text = Login.data_user(1).ToString() + "  [ID: " + Login.data_user(0).ToString() + "]"
@@ -22,9 +21,12 @@
             selectedJenisLockerID = DataGridViewJenisLocker.Rows(0).Cells(0).Value
         End If
 
+        LblUserIdentity.Text = Login.data_user(1).ToString() + "  [ID: " + Login.data_user(0).ToString() + "]"
+
     End Sub
 
     Private Sub JenisLocker_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        MessageBox.Show("Activated")
         ReloadDataTableDatabase()
 
         If (DataGridViewJenisLocker.Rows.Count > 0) Then
@@ -67,28 +69,6 @@
             hapusJenisLocker.Show()
         Else
             MessageBox.Show("No data selected")
-        End If
-    End Sub
-
-    Private Sub DataSewaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DataSewaToolStripMenuItem.Click
-        Me.Close()
-        DataSewa.Show()
-    End Sub
-
-    Private Sub MonitorLockerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MonitorLockerToolStripMenuItem.Click
-        toMonitorLocker = True
-        Me.Close()
-        Dim monitorLocker = New MonitorLocker
-        monitorLocker.Show()
-    End Sub
-
-    Private Sub JenisLockerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles JenisLockerToolStripMenuItem.Click
-        Me.Show()
-    End Sub
-
-    Private Sub JenisLocker_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        If Not toMonitorLocker Then
-            DataSewa.Show()
         End If
     End Sub
 
