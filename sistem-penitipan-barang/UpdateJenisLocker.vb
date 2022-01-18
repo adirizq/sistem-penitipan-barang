@@ -12,12 +12,16 @@
     End Sub
 
     Private Sub BtnUpdateLocker_Click(sender As Object, e As EventArgs) Handles BtnUpdateLocker.Click
-        JenisLocker.ClassJenisLocker.ukuranJenisLocker = txtUkuran.Text.ToString()
-        JenisLocker.ClassJenisLocker.biayaJenisLocker = Integer.Parse(TxtBiaya.Text)
+        If txtUkuran.Text.Length > 0 And TxtBiaya.Text.Length > 0 Then
+            JenisLocker.ClassJenisLocker.ukuranJenisLocker = txtUkuran.Text.ToString()
+            JenisLocker.ClassJenisLocker.biayaJenisLocker = Integer.Parse(TxtBiaya.Text)
 
-        JenisLocker.ClassJenisLocker.UpdateJenisUkuranByID(JenisLocker.selectedJenisLockerID, JenisLocker.ClassJenisLocker.biayaJenisLocker, JenisLocker.ClassJenisLocker.ukuranJenisLocker)
+            JenisLocker.ClassJenisLocker.UpdateJenisUkuranByID(JenisLocker.selectedJenisLockerID, JenisLocker.ClassJenisLocker.biayaJenisLocker, JenisLocker.ClassJenisLocker.ukuranJenisLocker)
 
-        Me.Close()
+            Me.Close()
+        Else
+            MessageBox.Show("Harap isi semua fields")
+        End If
     End Sub
 
     Private Sub TxtBiaya_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtBiaya.KeyPress

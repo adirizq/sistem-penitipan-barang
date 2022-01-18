@@ -3,10 +3,10 @@
     Public Shared Sewa As Sewa
     Public Shared Locker As Locker
     Public Shared ClassJenisLocker As ClassJenisLocker
-    Public name = "DataSewa"
 
     Private selectedRow As DataGridViewRow
     Private dataSewaDt As DataTable
+    Private statusKembali As Boolean
 
     Public Sub New()
 
@@ -25,6 +25,7 @@
         If (DataGridViewDataSewa.Rows.Count > 0) Then
             DataGridViewDataSewa.CurrentCell = DataGridViewDataSewa.Rows(0).Cells(0)
             selectedRow = DataGridViewDataSewa.Rows(0)
+            UpdateLocalData()
         End If
 
     End Sub
@@ -42,6 +43,7 @@
         If (DataGridViewDataSewa.Rows.Count > 0) Then
             DataGridViewDataSewa.CurrentCell = DataGridViewDataSewa.Rows(0).Cells(0)
             selectedRow = DataGridViewDataSewa.Rows(0)
+            UpdateLocalData()
         End If
     End Sub
 
@@ -57,13 +59,7 @@
 
     Private Sub BtnPengembalian_Click(sender As Object, e As EventArgs) Handles BtnPengembalian.Click
         If dataSewaDt.Rows.Count > 0 Then
-            If IsDBNull(selectedRow.Cells(3).Value) Then
-                Sewa.IDSewaProperty = selectedRow.Cells(0).Value
-                Locker.NamaLockerProperty = selectedRow.Cells(1).Value
-                Sewa.TglSewaProperty = selectedRow.Cells(2).Value
-                Sewa.LamaPinjamProperty = getNumeric(selectedRow.Cells(5).Value)
-                Sewa.DendaProperty = getNumeric(selectedRow.Cells(6).Value)
-
+            If statusKembali = False Then
                 Dim pengembalianBarang = New PengembalianBarang
                 pengembalianBarang.Show()
             Else
@@ -78,6 +74,7 @@
         Dim index As Integer = e.RowIndex
         If (index >= 0) Then
             selectedRow = DataGridViewDataSewa.Rows(index)
+            UpdateLocalData()
         End If
     End Sub
 
@@ -90,4 +87,18 @@
         Next
         Return Integer.Parse(output.ToString())
     End Function
+
+    Private Sub UpdateLocalData()
+        Sewa.IDSewaProperty = selectedRow.Cells(0).Value
+        Locker.NamaLockerProperty = selectedRow.Cells(1).Value
+        Sewa.TglSewaProperty = selectedRow.Cells(2).Value
+        Sewa.LamaPinjamProperty = getNumeric(selectedRow.Cells(5).Value)
+        Sewa.DendaProperty = getNumeric(selectedRow.Cells(6).Value)
+
+        If IsDBNull(selectedRow.Cells(3).Value) Then
+            statusKembali = False
+        Else
+            statusKembali = True
+        End If
+    End Sub
 End Class
